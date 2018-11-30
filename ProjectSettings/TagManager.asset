@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - Enemy
+  - PlayerDamageDealer
+  - EnemyDamageDealer
   layers:
   - Default
   - TransparentFX
@@ -19,6 +22,11 @@ TagManager:
   - Postprocessing
   - 
   - 
+  - PostProcessing
+  - Player
+  - PlayerWeapon
+  - Enemy
+  - EnemyWeapon
   - 
   - 
   - 

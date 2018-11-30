@@ -4,6 +4,8 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Assets/Scenes/Testing_Scenes/*
+
 
 # Visual Studio cache directory
 .vs/

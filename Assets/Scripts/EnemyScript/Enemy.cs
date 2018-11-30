@@ -6,8 +6,8 @@ public class Enemy : MonoBehaviour
 {
 
     [Header("Enemy Stats")]
-    [SerializeField] private float m_maxHealth = 100f;
-    [SerializeField] private float m_speed = 1f;
+    [SerializeField] private int m_maxHealth = 100;
+    [SerializeField] private float m_speed = 0.5f;
     [SerializeField] private bool m_smartEnemy = false;
     [SerializeField] private Transform m_platformDetector;
     [SerializeField] private Transform m_playerDetector;

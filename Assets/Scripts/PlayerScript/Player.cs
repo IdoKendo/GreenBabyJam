@@ -2,15 +2,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
+    [Header("Player")]
+    [SerializeField] private float m_moveSpeed = 10f;
+    [SerializeField] private int m_health = 400;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void Start()
+    {
+        
+    }
+    
+    private void Update()
+    {
+        Move();
+        Jump();
+        PerformAction();
+    }
+
+    private void Move()
+    {
+
+    }
+
+    private void Jump()
+    {
+
+    }
+
+    private void PerformAction()
+    {
+
+    }
+
+    private void MeleeAttack()
+    {
+
+    }
+
+    public void FireballAttack()
+    {
+
+    }
+
+    public void RaiseShield()
+    {
+
+    }
+
+    public void SuperJump()
+    {
+
+    }
 }

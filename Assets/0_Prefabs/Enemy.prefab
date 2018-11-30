@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1657379667449998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: -0.04, z: 0}
+  m_LocalPosition: {x: -0.08, y: -0.065, z: 0}
   m_LocalScale: {x: 0.175, y: 0.175, z: 1}
   m_Children: []
   m_Father: {fileID: 4285590205440446}
@@ -80,8 +80,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1042025211582856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2, y: 16.656, z: 0}
+  m_LocalScale: {x: 5, y: 10, z: 1}
   m_Children:
   - {fileID: 4604381388529362}
   - {fileID: 4166209307228872}
@@ -164,11 +164,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb61d11939188d944b7186899f99bf99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxHealth: 300
-  m_speed: 1
+  m_maxHealth: 100
+  m_speed: 0.5
   m_smartEnemy: 0
   m_platformDetector: {fileID: 4166209307228872}
   m_playerDetector: {fileID: 4604381388529362}
+  m_attackDistance: 0.01
+  m_attackCooldown: 1
   m_deathSound: {fileID: 0}
   m_deathVolume: 0.75
 --- !u!212 &212319553815528196

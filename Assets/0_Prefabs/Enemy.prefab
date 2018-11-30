@@ -195,7 +195,7 @@ MonoBehaviour:
   m_smartEnemy: 0
   m_platformDetector: {fileID: 4098130023881976}
   m_playerDetector: {fileID: 4524694185017036}
-  m_attackDistance: 0.01
+  m_attackDistance: 0.1
   m_attackCooldown: 1
   m_deathSound: {fileID: 0}
   m_deathVolume: 0.75

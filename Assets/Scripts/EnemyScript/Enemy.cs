@@ -2,25 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Creature
 {
-
-    [Header("Enemy Stats")]
-    [SerializeField] private int m_maxHealth = 100;
-    [SerializeField] private float m_speed = 0.5f;
+    [Header("Enemy")]
     [SerializeField] private bool m_smartEnemy = false;
     [SerializeField] private Transform m_platformDetector;
     [SerializeField] private Transform m_playerDetector;
 
     [Header("Smart Attributes")]
-    [SerializeField] private float m_attackDistance = 0.01f;
+    [SerializeField] private float m_attackDistance = 0.1f;
     [SerializeField] private float m_attackCooldown = 1f;
 
-    [Header("Death Effects")]
-    [SerializeField] private AudioClip m_deathSound;
-    [SerializeField] [Range(0, 1)] private float m_deathVolume = 0.75f;
-
-    private float m_currHealth;
     private bool m_facingLeft = true;
     private float m_attackTime = 0;
 
@@ -101,7 +93,7 @@ public class Enemy : MonoBehaviour
 
     private void Move()
     {
-        float delta = Time.deltaTime * m_speed;
+        float delta = Time.deltaTime * m_moveSpeed;
 
         transform.position = new Vector2()
         {
@@ -116,23 +108,5 @@ public class Enemy : MonoBehaviour
         {
             ProcessHit(collision.gameObject.GetComponent<DamageDealer>());
         }
-    }
-
-    private void ProcessHit(DamageDealer damageDealer)
-    {
-        m_currHealth -= damageDealer.Damage;
-
-        Debug.Log(string.Format("I got hit! my hp is: {0}", m_currHealth));
-
-        if (m_currHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    private void Die()
-    {
-        Destroy(gameObject);
-        AudioSource.PlayClipAtPoint(m_deathSound, Camera.main.transform.position, m_deathVolume);
     }
 }

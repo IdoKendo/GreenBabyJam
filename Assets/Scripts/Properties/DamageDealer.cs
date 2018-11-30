@@ -4,16 +4,8 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    [Header("Stats")]
-    [SerializeField] public float Damage = 50;
+    [Header("Damage Dealer Values")]
+    [SerializeField] private float m_damage = 50;
 
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        
-    }
+    public float Damage { get { return m_damage; } }
 }

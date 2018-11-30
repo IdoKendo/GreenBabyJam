@@ -2,26 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Creature
 {
     [Header("Player")]
-    [SerializeField] private float m_moveSpeed = 10f;
-    [SerializeField] private int m_health = 400;
     [SerializeField] private float m_jumpForce = 0.5f;
 
-    [Header("Power Ups")]
+    [Header("Weapons")]
+    [SerializeField] private GameObject m_weaponPrefab;
     [SerializeField] private bool m_unlockedFireballs = false;
+    [SerializeField] private GameObject m_fireballPrefab;
     [SerializeField] private bool m_unlockedShield = false;
+
+    [Header("Cooldowns")]
+    [SerializeField] private float m_weaponCooldown = 1f;
+    [SerializeField] private float m_fireballCooldown = 1f;
 
     private Rigidbody2D m_rigidBody;
     private bool m_isGrounded;
+    private float m_weaponTime = 0f;
+    private float m_fireballTime = 0f;
+    private bool m_shielded = false;
 
-    public int Health { get { return m_health; } }
+    public float MaxHealth { get { return m_maxHealth; } }
+    public float Health { get { return m_currHealth; } }
     public bool Fireballs { get { return m_unlockedFireballs; } }
     public bool Shield { get { return m_unlockedShield; } }
 
     private void Start()
     {
+        m_currHealth = m_maxHealth;
         m_rigidBody = GetComponent<Rigidbody2D>();
     }
     
@@ -29,10 +38,17 @@ public class Player : MonoBehaviour
     {
         Move();
         PerformAction();
+        Cooldown();
     }
 
     private void Move()
     {
+        if (m_shielded)
+        {
+            m_rigidBody.velocity = new Vector2(0, m_rigidBody.velocity.y);
+            return;
+        }
+
         float deltaX = Input.GetAxis("Horizontal");
 
         if (Input.GetButtonDown("Jump") && m_isGrounded)
@@ -46,33 +62,50 @@ public class Player : MonoBehaviour
 
     private void PerformAction()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && m_weaponTime <= 0)
         {
             MeleeAttack();
         }
-        else if (Input.GetButtonDown("Fire2") && m_unlockedFireballs)
+        else if (Input.GetButtonDown("Fire2") && m_unlockedFireballs && m_fireballTime <= 0)
         {
             FireballAttack();
         }
-        else if (Input.GetButtonDown("Fire3") && m_unlockedShield)
+        else if (m_unlockedShield)
         {
-            RaiseShield();
+            if (Input.GetButton("Fire3"))
+            {
+                m_shielded = true;
+            }
+            else
+            {
+                m_shielded = false;
+            }
+        }
+    }
+
+    private void Cooldown()
+    {
+        if (m_weaponTime > 0)
+        {
+            m_weaponTime -= Time.deltaTime;
+        }
+
+        if (m_fireballTime > 0)
+        {
+            m_fireballTime -= Time.deltaTime;
         }
     }
 
     private void MeleeAttack()
     {
-        Debug.Log("Swinging ma club");
+        Instantiate(m_weaponPrefab, transform.position, Quaternion.identity);
+        m_weaponTime = m_weaponCooldown;
     }
 
     private void FireballAttack()
     {
-        Debug.Log("Firing ma lazer");
-    }
-
-    private void RaiseShield()
-    {
-        Debug.Log("Shields up!");
+        Instantiate(m_fireballPrefab, transform.position, Quaternion.identity);
+        m_fireballTime = m_fireballCooldown;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -88,6 +121,19 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             m_isGrounded = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "EnemyDamageDealer")
+        {
+            if (m_shielded)
+            {
+                return;
+            }
+
+            ProcessHit(collision.gameObject.GetComponent<DamageDealer>());
         }
     }
 

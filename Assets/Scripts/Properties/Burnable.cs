@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Burnable : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+public class Burnable : MonoBehaviour
+{
+    void Start()
+    {
+        
+    }
+    
+    void Update()
+    {
+        
+    }
 
     void OnTriggerEnter2D(Collider2D collider2D)
     {

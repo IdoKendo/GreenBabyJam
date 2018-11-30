@@ -9,8 +9,16 @@ public class Player : MonoBehaviour
     [SerializeField] private int m_health = 400;
     [SerializeField] private float m_jumpForce = 0.5f;
 
+    [Header("Power Ups")]
+    [SerializeField] private bool m_unlockedFireballs = false;
+    [SerializeField] private bool m_unlockedShield = false;
+
     private Rigidbody2D m_rigidBody;
     private bool m_isGrounded;
+
+    public int Health { get { return m_health; } }
+    public bool Fireballs { get { return m_unlockedFireballs; } }
+    public bool Shield { get { return m_unlockedShield; } }
 
     private void Start()
     {
@@ -33,6 +41,7 @@ public class Player : MonoBehaviour
         }
 
         m_rigidBody.velocity = new Vector2(deltaX * m_moveSpeed, m_rigidBody.velocity.y);
+        transform.localRotation = Quaternion.Euler(0, (deltaX  < 0) ? 180 : 0, 0);
     }
 
     private void PerformAction()
@@ -41,11 +50,11 @@ public class Player : MonoBehaviour
         {
             MeleeAttack();
         }
-        else if (Input.GetButtonDown("Fire2"))
+        else if (Input.GetButtonDown("Fire2") && m_unlockedFireballs)
         {
             FireballAttack();
         }
-        else if (Input.GetButtonDown("Fire3"))
+        else if (Input.GetButtonDown("Fire3") && m_unlockedShield)
         {
             RaiseShield();
         }
@@ -53,17 +62,17 @@ public class Player : MonoBehaviour
 
     private void MeleeAttack()
     {
-
+        Debug.Log("Swinging ma club");
     }
 
     private void FireballAttack()
     {
-
+        Debug.Log("Firing ma lazer");
     }
 
     private void RaiseShield()
     {
-
+        Debug.Log("Shields up!");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -80,5 +89,15 @@ public class Player : MonoBehaviour
         {
             m_isGrounded = false;
         }
+    }
+
+    public void UnlockFireballs()
+    {
+        m_unlockedFireballs = true;
+    }
+
+    public void UnlockShield()
+    {
+        m_unlockedShield = true;
     }
 }

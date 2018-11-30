@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
 
         if (hit.collider != null)
         {
-            if (hit.collider.tag == "Player")
+            if (hit.collider.CompareTag("Player"))
             {
                 if (m_attackTime <= 0)
                 {

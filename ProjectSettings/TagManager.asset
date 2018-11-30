@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - PlayerDamageDealer
   - EnemyDamageDealer
+  - Ground
+  - Confiner
   layers:
   - Default
   - TransparentFX
@@ -27,11 +29,6 @@ TagManager:
   - PlayerWeapon
   - Enemy
   - EnemyWeapon
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 

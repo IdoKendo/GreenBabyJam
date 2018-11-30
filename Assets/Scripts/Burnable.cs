@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Burnable : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -23,6 +22,14 @@ public class Burnable : MonoBehaviour {
     {
         ParticleSystem fire = GetComponentInChildren<ParticleSystem>();
         fire.Play();
+        SpawnEffect dissolve = GetComponent<SpawnEffect>();
+        dissolve.Burn();
         Debug.Log("HELP I'M BURNING");
+    }
+    public void Destroy()
+    {
+        ParticleSystem fire = GetComponentInChildren<ParticleSystem>();
+        fire.Stop();
+        // TODO: Send to storytelling engine a message
     }
 }

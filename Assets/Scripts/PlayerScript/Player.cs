@@ -12,6 +12,7 @@ public class Player : Creature
     [SerializeField] private bool m_unlockedFireballs = false;
     [SerializeField] private GameObject m_fireballPrefab;
     [SerializeField] private bool m_unlockedShield = false;
+    [SerializeField] private float m_superJumpModifier = 1.5f;
 
     [Header("Cooldowns")]
     [SerializeField] private float m_weaponCooldown = 1f;
@@ -37,6 +38,7 @@ public class Player : Creature
     private void Update()
     {
         Move();
+        Jump();
         PerformAction();
         Cooldown();
     }
@@ -51,13 +53,23 @@ public class Player : Creature
 
         float deltaX = Input.GetAxis("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && m_isGrounded)
-        {
-            m_rigidBody.AddForce(Vector2.up * m_jumpForce, ForceMode2D.Impulse);
-        }
-
         m_rigidBody.velocity = new Vector2(deltaX * m_moveSpeed, m_rigidBody.velocity.y);
         transform.localRotation = Quaternion.Euler(0, (deltaX  < 0) ? 180 : 0, 0);
+    }
+
+    private void Jump()
+    {
+        if (Input.GetButtonDown("Jump") && m_isGrounded)
+        {
+            Vector2 jumpVector = Vector2.up * m_jumpForce;
+
+            if (m_shielded)
+            {
+                jumpVector *= m_superJumpModifier;
+            }
+
+            m_rigidBody.AddForce(jumpVector, ForceMode2D.Impulse);
+        }
     }
 
     private void PerformAction()

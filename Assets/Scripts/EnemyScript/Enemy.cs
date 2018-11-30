@@ -8,7 +8,13 @@ public class Enemy : MonoBehaviour
     [Header("Enemy Stats")]
     [SerializeField] private float m_maxHealth = 100f;
     [SerializeField] private float m_speed = 1f;
-    [SerializeField] private Transform m_face;
+    [SerializeField] private bool m_smartEnemy = false;
+    [SerializeField] private Transform m_platformDetector;
+    [SerializeField] private Transform m_playerDetector;
+
+    [Header("Smart Attributes")]
+    [SerializeField] private float m_attackDistance = 0.01f;
+    [SerializeField] private float m_attackCooldown = 1f;
 
     [Header("Death Effects")]
     [SerializeField] private AudioClip m_deathSound;
@@ -16,6 +22,7 @@ public class Enemy : MonoBehaviour
 
     private float m_currHealth;
     private bool m_facingLeft = true;
+    private float m_attackTime = 0;
 
     private void Start()
     {
@@ -24,15 +31,63 @@ public class Enemy : MonoBehaviour
     
     private void Update()
     {
-        Patrol();
+        bool toPatrol = true;
+        
+        if (m_smartEnemy)
+        {
+            toPatrol = FindPlayer();
+
+            if (m_attackTime > 0)
+            {
+                toPatrol = false;
+                m_attackTime -= Time.deltaTime;
+            }
+        }
+
+        if (toPatrol)
+        {
+            Patrol();
+        }
+    }
+
+    private bool FindPlayer()
+    {
+        bool foundPlayer = true;
+        Vector2 direction = m_facingLeft ? Vector2.left : Vector2.right;
+        RaycastHit2D hit = Physics2D.Raycast(m_playerDetector.position, direction, m_attackDistance);
+
+        Debug.DrawRay(m_playerDetector.position, direction, new Color(0, 0, 255));
+
+        if (hit.collider != null)
+        {
+            if (hit.collider.tag == "Player")
+            {
+                if (m_attackTime <= 0)
+                {
+                    m_attackTime = m_attackCooldown;
+                    Attack();
+                }
+                foundPlayer = false;
+
+                
+            }
+        }
+
+        return foundPlayer;
+    }
+
+    private void Attack()
+    {
+        Debug.Log("Attacking player!");
+        // TODO: Implement attacking the player
     }
 
     private void Patrol()
     {
         Vector2 direction = m_facingLeft ? new Vector2(-1, -0.5f) : new Vector2(1, -0.5f);
-        RaycastHit2D hit = Physics2D.Raycast(m_face.position, direction, 1f);
+        RaycastHit2D hit = Physics2D.Raycast(m_platformDetector.position, direction, 1f);
 
-        Debug.DrawRay(m_face.position, direction);
+        Debug.DrawRay(m_platformDetector.position, direction, new Color(255, 0, 0));
 
         if (hit.collider == null)
         {
@@ -78,6 +133,6 @@ public class Enemy : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
-        //AudioSource.PlayClipAtPoint(m_deathSound, Camera.main.transform.position, m_deathVolume);
+        AudioSource.PlayClipAtPoint(m_deathSound, Camera.main.transform.position, m_deathVolume);
     }
 }

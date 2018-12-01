@@ -25,6 +25,7 @@ public class Player : Creature
     [SerializeField] private GameObject[] m_deathAnnimationArray;
 
     private bool m_isGrounded;
+    private bool m_isKnockedBack = false;
     private float m_weaponTime = 0f;
     private float m_fireballTime = 0f;
     private float m_knockbackTime = 0f;
@@ -39,7 +40,7 @@ public class Player : Creature
     Run}
     private AnimationState animation_state = AnimationState.Idle;
 
-    private void Start()
+    private new void Start()
     {
         base.Start();
         m_barbarian_animator = GetComponentInChildren<Animator>();
@@ -61,7 +62,7 @@ public class Player : Creature
             return;
         }
 
-        if (m_rigidBody.isKinematic)
+        if (m_isKnockedBack)
         {
             return;
         }
@@ -140,13 +141,13 @@ public class Player : Creature
             m_fireballTime -= Time.deltaTime;
         }
 
-        if (m_rigidBody.isKinematic)
+        if (m_isKnockedBack)
         {
             m_knockbackTime -= Time.deltaTime;
 
             if (m_knockbackTime <= 0)
             {
-                m_rigidBody.isKinematic = false;
+                m_isKnockedBack = false;
             }
         }
     }
@@ -202,9 +203,9 @@ public class Player : Creature
             knockbackPower = -knockbackPower;
 
         }
-        m_rigidBody.isKinematic = true;
+        m_isKnockedBack = true;
         m_knockbackTime = m_knockbckDuration;
-        m_rigidBody.velocity = new Vector2(knockbackPower, m_rigidBody.velocity.y);
+        m_rigidBody.velocity = new Vector2(knockbackPower, knockbackPower);
     }
 
     public void UnlockFireballs()

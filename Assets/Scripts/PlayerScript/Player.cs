@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : Creature
 {
     [Header("Player")]
-    [SerializeField] private float m_jumpForce = 0.5f;
+    [SerializeField] private float m_jumpForce = 5f;
     [SerializeField] private float m_knockbackPower = 3f;
     [SerializeField] private float m_knockbckDuration = 0.5f;
 
@@ -81,7 +81,6 @@ public class Player : Creature
             m_direction = EDirection.Left;
         }
 
-       // transform.Translate(new Vector3(deltaX * m_moveSpeed*Time.deltaTime, 0, 0));
         m_rigidBody.velocity = new Vector2(deltaX * m_moveSpeed, m_rigidBody.velocity.y);
         transform.localRotation = Quaternion.Euler(0, m_direction == EDirection.Left ? 0 : 180, 0);
     }
@@ -172,6 +171,11 @@ public class Player : Creature
         {
             m_isGrounded = true;
         }
+        else if (collision.gameObject.CompareTag("Platform"))
+        {
+            m_isGrounded = true;
+            transform.parent = collision.transform;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -179,6 +183,11 @@ public class Player : Creature
         if (collision.gameObject.CompareTag("Ground"))
         {
             m_isGrounded = false;
+        }
+        else if (collision.gameObject.CompareTag("Platform"))
+        {
+            m_isGrounded = false;
+            transform.parent = null;
         }
     }
 

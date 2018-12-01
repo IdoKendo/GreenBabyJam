@@ -160,7 +160,9 @@ public class Player : Creature
 
     private void FireballAttack()
     {
-        Instantiate(m_fireballPrefab, transform.position, Quaternion.identity);
+        GameObject fireball = Instantiate(m_fireballPrefab, transform.position, Quaternion.identity);
+
+        fireball.GetComponent<Fireball>().SetDirection(m_direction);
         m_fireballTime = m_fireballCooldown;
     }
 

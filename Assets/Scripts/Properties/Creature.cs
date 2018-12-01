@@ -32,6 +32,13 @@ public class Creature : MonoBehaviour
 
     private void Die()
     {
+        DieAnimation();
         Destroy(gameObject);
+    }
+
+    protected virtual void DieAnimation()
+    {
+        Debug.Log("Bad Animation");
+
     }
 }

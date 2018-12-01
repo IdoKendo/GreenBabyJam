@@ -12,9 +12,11 @@ public class Player : Creature
     [Header("Weapons")]
     [SerializeField] private GameObject m_weaponPrefab;
     [SerializeField] private bool m_unlockedFireballs = false;
+    [SerializeField] private float m_fireballSelfDamage = 20f;
     [SerializeField] private GameObject m_fireballPrefab;
     [SerializeField] private bool m_unlockedShield = false;
     [SerializeField] private float m_superJumpModifier = 1.5f;
+    [SerializeField] private float m_superJumpSelfDamage = 20f;
 
     [Header("Cooldowns")]
     [SerializeField] private float m_weaponCooldown = 1f;
@@ -92,6 +94,9 @@ public class Player : Creature
 
             if (m_shielded)
             {
+                float potentialNewHealth = m_currHealth - m_superJumpSelfDamage;
+
+                m_currHealth = Mathf.Clamp(potentialNewHealth, 1, potentialNewHealth);
                 jumpVector *= m_superJumpModifier;
             }
 
@@ -154,9 +159,11 @@ public class Player : Creature
     private void FireballAttack()
     {
         GameObject fireball = Instantiate(m_fireballPrefab, transform.position, Quaternion.identity);
+        float potentialNewHealth = m_currHealth - m_fireballSelfDamage;
 
         fireball.GetComponent<Fireball>().SetDirection(m_direction);
         m_fireballTime = m_fireballCooldown;
+        m_currHealth = Mathf.Clamp(potentialNewHealth, 1, potentialNewHealth);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

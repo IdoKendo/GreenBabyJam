@@ -1,27 +1,39 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponUI : MonoBehaviour {
 
-    private GameObject noermalWeapon;
+    
     private GameObject fireWeapon;
     private GameObject wheelWeapon;
-    
+    private GameObject weapons;
 
     private Player player;
 
+    private const float weaponUIXPosition = 0.54f;
+    private const float weaponUIYPosition = 0.45f;
+
     // Use this for initialization
     void Start () {
-        noermalWeapon = GameObject.Find("NoermalWeapon");
+        
         fireWeapon = GameObject.Find("FireWeapon");
         wheelWeapon = GameObject.Find("WheelWeapon");
         player = FindObjectOfType<Player>();
         setUI();
+        weapons = GameObject.Find("WeaponUI");
+        WeaponUIPosition();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void WeaponUIPosition()
+    {
+        RectTransform weaponUIRect = weapons.transform as RectTransform;
+        weaponUIRect.anchorMax = new Vector2(weaponUIXPosition, weaponUIYPosition);
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         setUI();
     }

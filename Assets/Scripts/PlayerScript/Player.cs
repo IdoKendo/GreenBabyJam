@@ -37,10 +37,6 @@ public class Player : Creature
     public float Health { get { return m_currHealth; } }
     public bool Fireballs { get { return m_unlockedFireballs; } }
     public bool Shield { get { return m_unlockedShield; } }
-    enum AnimationState {
-    Idle,
-    Run}
-    private AnimationState animation_state = AnimationState.Idle;
 
     private new void Start()
     {

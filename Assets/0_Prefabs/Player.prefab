@@ -536,8 +536,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4087959488458780}
   - component: {fileID: 114575323870281124}
-  - component: {fileID: 70269619330398524}
   - component: {fileID: 50779862119115766}
+  - component: {fileID: 70053017781938550}
   m_Layer: 14
   m_Name: Player
   m_TagString: Player
@@ -1876,7 +1876,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351280707877086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.39, y: 11.2, z: 0}
+  m_LocalPosition: {x: 2.39, y: 11.2, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4316863619536746}
@@ -3333,7 +3333,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &70269619330398524
+--- !u!70 &70053017781938550
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3345,8 +3345,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.005528927}
-  m_Size: {x: 1.1549082, y: 2.210105}
+  m_Offset: {x: 0.0035556555, y: -0.19903469}
+  m_Size: {x: 0.7204559, y: 2.0093899}
   m_Direction: 0
 --- !u!95 &95175572651310686
 Animator:

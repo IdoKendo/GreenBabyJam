@@ -162,11 +162,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114575323870281124, guid: 4bfc9a0950c16db44b404276fde4214a,
-        type: 2}
-      propertyPath: m_deathAnnimationArray.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4087959488458780, guid: 4bfc9a0950c16db44b404276fde4214a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2.39
@@ -177,7 +172,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4087959488458780, guid: 4bfc9a0950c16db44b404276fde4214a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4087959488458780, guid: 4bfc9a0950c16db44b404276fde4214a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -199,18 +194,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114575323870281124, guid: 4bfc9a0950c16db44b404276fde4214a,
-        type: 2}
-      propertyPath: m_deathAnnimationArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 1000011128802252, guid: aa2cba9fdcf73b04493847d74781037f,
-        type: 2}
-    - target: {fileID: 114575323870281124, guid: 4bfc9a0950c16db44b404276fde4214a,
-        type: 2}
-      propertyPath: m_deathAnnimationArray.Array.data[1]
-      value: 
-      objectReference: {fileID: 1775406099119076, guid: 08139ce5ec4b0fd40833381309940ba1,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bfc9a0950c16db44b404276fde4214a, type: 2}
   m_IsPrefabAsset: 0
@@ -290,7 +273,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 658030632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.39, y: 11.2, z: -10}
+  m_LocalPosition: {x: 2.39, y: 11.2, z: -10.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2118577757}
@@ -1602,7 +1585,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1686299472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.39, y: 11.2, z: -10}
+  m_LocalPosition: {x: 2.39, y: 11.2, z: -10.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

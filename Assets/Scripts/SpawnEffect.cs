@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Shared.Enums;
 using UnityEngine;
 
 public class SpawnEffect : MonoBehaviour {
@@ -16,13 +15,14 @@ public class SpawnEffect : MonoBehaviour {
 
     void Start ()
     {
-        shaderProperty = Shader.PropertyToID("_cutoff");
+        shaderProperty = Shader.PropertyToID(ShaderPropertyType.CutOff);
         _renderer = GetComponent<Renderer>();
         ps = GetComponentInChildren <ParticleSystem>();
 
         var main = ps.main;
         main.duration = spawnEffectTime;
     }
+
     public void Burn()
     {
         burning = true;

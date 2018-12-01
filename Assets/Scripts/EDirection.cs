@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-public enum EDirection
+﻿public enum EDirection
 {
     Left,
     Right

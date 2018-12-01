@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Shared.Enums;
 using UnityEngine;
 
 public class collapsable : MonoBehaviour {
@@ -9,6 +8,7 @@ public class collapsable : MonoBehaviour {
 
     private bool should_start_falling;
     float timer = 0;
+
     // Use this for initialization
     void Start () {
 		
@@ -36,12 +36,11 @@ public class collapsable : MonoBehaviour {
                 should_start_falling = false;
             }
         }
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(GameCollisionType.Player))
         {
             Instantiate(m_fallAnimation, transform.position, Quaternion.identity);
             should_start_falling = true;

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Shared.Enums;
 using UnityEngine;
 
 public class Enemy : Creature
@@ -47,16 +46,15 @@ public class Enemy : Creature
 
         if (hit.collider != null)
         {
-            if (hit.collider.CompareTag("Player"))
+            if (hit.collider.CompareTag(CharacterType.Player))
             {
                 if (m_attackTime <= 0)
                 {
                     m_attackTime = m_attackCooldown;
                     Attack();
                 }
-                foundPlayer = false;
 
-                
+                foundPlayer = false;
             }
         }
 
@@ -106,7 +104,7 @@ public class Enemy : Creature
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "PlayerDamageDealer")
+        if (collision.tag == CollisionType.PlayerDamageDealer)
         {
             ProcessHit(collision.gameObject.GetComponent<DamageDealer>());
         }

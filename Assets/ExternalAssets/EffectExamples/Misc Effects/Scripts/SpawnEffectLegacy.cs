@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnEffectLegacy : MonoBehaviour {
@@ -38,7 +36,6 @@ public class SpawnEffectLegacy : MonoBehaviour {
             ps.Play();
             timer = 0;
         }
-
 
         _renderer.material.SetFloat(shaderProperty, fadeIn.Evaluate( Mathf.InverseLerp(0, spawnEffectTime, timer)));
         

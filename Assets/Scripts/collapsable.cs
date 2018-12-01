@@ -5,6 +5,7 @@ using UnityEngine;
 public class collapsable : MonoBehaviour {
 
     [SerializeField] internal float m_fallDelay = 0.5f;
+    [SerializeField] private GameObject m_fallAnimation;
 
     private bool should_start_falling;
     float timer = 0;
@@ -23,6 +24,12 @@ public class collapsable : MonoBehaviour {
             }
             else
             {
+                Rigidbody2D animation_rigid = m_fallAnimation.GetComponent<Rigidbody2D>();
+                if (!animation_rigid)
+                {
+                    animation_rigid = m_fallAnimation.AddComponent<Rigidbody2D>();
+                    animation_rigid.gravityScale = 0.2f;
+                }
                 Rigidbody2D rigidBodyobject = GetComponent<Rigidbody2D>();
                 rigidBodyobject.bodyType = RigidbodyType2D.Dynamic;
                 rigidBodyobject.gravityScale = 0.2f;
@@ -36,6 +43,7 @@ public class collapsable : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Instantiate(m_fallAnimation, transform.position, Quaternion.identity);
             should_start_falling = true;
         }
     }

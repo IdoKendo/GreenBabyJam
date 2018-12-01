@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
 
     private GameObject healthBar;
-    private Transform bar;
+    [SerializeField] private Image bar;
    
     private Player player;
 
@@ -15,10 +16,9 @@ public class HealthBar : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        bar = transform.Find("Bar");
         player = FindObjectOfType<Player>();
         healthBar = GameObject.Find("HealthBar");
-        HealthBarPosition();
+      //  HealthBarPosition();
 
 
     }
@@ -32,7 +32,8 @@ public class HealthBar : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
         ChangeHealt();
     }
 
@@ -41,6 +42,6 @@ public class HealthBar : MonoBehaviour {
         float normilizedHealth = player.Health / player.MaxHealth;
 
         normilizedHealth = Mathf.Clamp(normilizedHealth, 0, 1);
-        bar.localScale = new Vector2(normilizedHealth, 1f);
+        bar.fillAmount = normilizedHealth;
     }
 }

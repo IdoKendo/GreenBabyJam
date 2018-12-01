@@ -4,9 +4,10 @@ using UnityEngine;
 public class Enemy : Creature
 {
     [Header("Enemy")]
-    [SerializeField] private bool m_smartEnemy = false;
     [SerializeField] private Transform m_platformDetector;
     [SerializeField] private Transform m_playerDetector;
+    [SerializeField] private float m_distanceToDetect = 1.5f;
+    [SerializeField] private bool m_smartEnemy = false;
 
     [Header("Smart Attributes")]
     [SerializeField] private float m_attackDistance = 0.1f;
@@ -39,7 +40,7 @@ public class Enemy : Creature
     private bool FindPlayer()
     {
         bool foundPlayer = true;
-        Vector2 direction = m_direction == EDirection.Left ? Vector2.left : Vector2.right;
+        Vector2 direction = m_direction == eHorizontalDirection.Left ? Vector2.left : Vector2.right;
         RaycastHit2D hit = Physics2D.Raycast(m_playerDetector.position, direction, m_attackDistance);
 
         Debug.DrawRay(m_playerDetector.position, direction, new Color(0, 0, 255));
@@ -69,10 +70,10 @@ public class Enemy : Creature
 
     private void Patrol()
     {
-        Vector2 directionDown = m_direction == EDirection.Left ? new Vector2(-1, -0.5f) : new Vector2(1, -0.5f);
-        Vector2 directionForward = m_direction == EDirection.Left ? Vector2.left : Vector2.right;
-        RaycastHit2D hitDown = Physics2D.Raycast(m_platformDetector.position, directionDown, 1f);
-        RaycastHit2D hitForward = Physics2D.Raycast(m_platformDetector.position, directionForward, 1f);
+        Vector2 directionDown = m_direction == eHorizontalDirection.Left ? new Vector2(-1, -0.5f) : new Vector2(1, -0.5f);
+        Vector2 directionForward = m_direction == eHorizontalDirection.Left ? Vector2.left : Vector2.right;
+        RaycastHit2D hitDown = Physics2D.Raycast(m_platformDetector.position, directionDown, m_distanceToDetect);
+        RaycastHit2D hitForward = Physics2D.Raycast(m_platformDetector.position, directionForward, m_distanceToDetect);
 
         Debug.DrawRay(m_platformDetector.position, directionDown, new Color(255, 0, 0));
         Debug.DrawRay(m_platformDetector.position, directionForward, new Color(255, 0, 0));
@@ -92,16 +93,16 @@ public class Enemy : Creature
 
     private void ChangeDirection()
     {
-        if (m_direction == EDirection.Left)
+        if (m_direction == eHorizontalDirection.Left)
         {
-            m_direction = EDirection.Right;
+            m_direction = eHorizontalDirection.Right;
         }
         else
         {
-            m_direction = EDirection.Left;
+            m_direction = eHorizontalDirection.Left;
         }
 
-        transform.localRotation = Quaternion.Euler(0, m_direction == EDirection.Left ? 0 : 180, 0);
+        transform.localRotation = Quaternion.Euler(0, m_direction == eHorizontalDirection.Left ? 0 : 180, 0);
     }
 
     private void Move()
@@ -110,7 +111,7 @@ public class Enemy : Creature
 
         transform.position = new Vector2()
         {
-            x = m_direction == EDirection.Left ? transform.position.x - delta : transform.position.x + delta,
+            x = m_direction == eHorizontalDirection.Left ? transform.position.x - delta : transform.position.x + delta,
             y = transform.position.y
         };
     }

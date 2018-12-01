@@ -77,15 +77,15 @@ public class Player : Creature
 
         if (deltaX < 0)
         {
-            m_direction = EDirection.Right;
+            m_direction = eHorizontalDirection.Right;
         }
         else if (deltaX > 0)
         {
-            m_direction = EDirection.Left;
+            m_direction = eHorizontalDirection.Left;
         }
 
         m_rigidBody.velocity = new Vector2(deltaX * m_moveSpeed, m_rigidBody.velocity.y);
-        transform.localRotation = Quaternion.Euler(0, m_direction == EDirection.Left ? 0 : 180, 0);
+        transform.localRotation = Quaternion.Euler(0, m_direction == eHorizontalDirection.Left ? 0 : 180, 0);
     }
 
     private void Jump()
@@ -228,7 +228,7 @@ public class Player : Creature
     {
         float knockbackPower = m_knockbackPower;
 
-        if (m_direction == EDirection.Left)
+        if (m_direction == eHorizontalDirection.Left)
         {
             knockbackPower = -knockbackPower;
 

@@ -8,7 +8,7 @@ public class Creature : MonoBehaviour
 
     internal float m_currHealth;
     internal Rigidbody2D m_rigidBody;
-    internal EDirection m_direction = EDirection.Left;
+    internal eHorizontalDirection m_direction = eHorizontalDirection.Left;
 
     internal void Start()
     {

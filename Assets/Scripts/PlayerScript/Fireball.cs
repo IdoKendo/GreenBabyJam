@@ -4,7 +4,7 @@ public class Fireball : DamageDealer
 {
     [Header("Movement")]
     [SerializeField] private float m_speed = 8f;
-    [SerializeField] private EDirection m_direction = EDirection.Right;
+    [SerializeField] private eHorizontalDirection m_direction = eHorizontalDirection.Right;
     [SerializeField] private float m_upSpeed = 2;
 
     [Header("Stats")]
@@ -25,7 +25,7 @@ public class Fireball : DamageDealer
 
         m_upSpeed -= 0.08f;
 
-        if (m_direction == EDirection.Left)
+        if (m_direction == eHorizontalDirection.Left)
         {
             xVector = Vector2.right.x;
         }
@@ -35,7 +35,7 @@ public class Fireball : DamageDealer
         m_rigidBody.AddForce(movement * m_speed);
     }
 
-    public void SetDirection(EDirection direction)
+    public void SetDirection(eHorizontalDirection direction)
     {
         m_direction = direction;
     }

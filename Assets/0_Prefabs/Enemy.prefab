@@ -1425,7 +1425,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484055859116956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.065468, y: 5.134226, z: 0}
+  m_LocalPosition: {x: 37.82, y: -2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4667257081036700}
@@ -2211,9 +2211,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_maxHealth: 100
   m_moveSpeed: 2
-  m_smartEnemy: 0
   m_platformDetector: {fileID: 4098130023881976}
   m_playerDetector: {fileID: 4524694185017036}
+  m_distanceToDetect: 2
+  m_smartEnemy: 0
   m_attackDistance: 0.1
   m_attackCooldown: 1
 --- !u!137 &137184764413749892

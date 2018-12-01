@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Shared.Enums;
 using UnityEngine;
 
-public class WeaponUI : MonoBehaviour {
-
-    
+public class WeaponUI : MonoBehaviour
+{
     private GameObject fireWeapon;
     private GameObject wheelWeapon;
     private GameObject weapons;
@@ -18,11 +15,11 @@ public class WeaponUI : MonoBehaviour {
     // Use this for initialization
     void Start () {
         
-        fireWeapon = GameObject.Find("FireWeapon");
-        wheelWeapon = GameObject.Find("WheelWeapon");
+        fireWeapon = GameObject.Find(GameObjectType.FireWeapon);
+        wheelWeapon = GameObject.Find(GameObjectType.WheelWeapon);
         player = FindObjectOfType<Player>();
         setUI();
-        weapons = GameObject.Find("WeaponUI");
+        weapons = GameObject.Find(GameObjectType.WeaponUI);
         //WeaponUIPosition();
     }
 

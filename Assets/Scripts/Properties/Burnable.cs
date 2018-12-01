@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Shared.Enums;
 using UnityEngine;
 
 public class Burnable : MonoBehaviour
@@ -16,7 +15,7 @@ public class Burnable : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider2D)
     {
-        if (collider2D.gameObject.name.ToLower().StartsWith("fireball"))
+        if (collider2D.gameObject.name.ToLower().StartsWith(GameCollisionType.Fireball))
             Burn();
     }
 
@@ -28,6 +27,7 @@ public class Burnable : MonoBehaviour
         dissolve.Burn();
         Debug.Log("HELP I'M BURNING");
     }
+
     public void Destroy()
     {
         ParticleSystem fire = GetComponentInChildren<ParticleSystem>();

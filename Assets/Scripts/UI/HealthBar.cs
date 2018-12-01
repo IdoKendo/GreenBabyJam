@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Shared.Enums;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,10 +15,8 @@ public class HealthBar : MonoBehaviour {
     // Use this for initialization
     void Start () {
         player = FindObjectOfType<Player>();
-        healthBar = GameObject.Find("HealthBar");
+        healthBar = GameObject.Find(GameObjectType.HealthBar);
       //  HealthBarPosition();
-
-
     }
 
     private void HealthBarPosition()

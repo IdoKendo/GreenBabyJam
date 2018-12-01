@@ -1,7 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using Shared.Enums;
 using TMPro;
-
+using UnityEngine;
 
 public class AdjustTimeScale : MonoBehaviour
 {
@@ -14,7 +13,7 @@ public class AdjustTimeScale : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        if (Input.GetAxis(AxisActionType.MouseScrollWheel) > 0f)
         {
             if (Time.timeScale < 1.0F)
             {
@@ -29,7 +28,7 @@ public class AdjustTimeScale : MonoBehaviour
             }
           
         }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        else if (Input.GetAxis(AxisActionType.MouseScrollWheel) < 0f)
         {
             if (Time.timeScale >= 0.2F)
             {

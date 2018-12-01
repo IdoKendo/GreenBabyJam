@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Boss1 : Creature
 {
-
-	// Use this for initialization
-	void Start () {
+    private new void Start()
+    {
         base.Start();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
+
+    private void Update()
+    {
+        
+    }
 }

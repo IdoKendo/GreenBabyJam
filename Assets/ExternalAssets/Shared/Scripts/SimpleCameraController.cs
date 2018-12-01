@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Shared.Enums;
+using UnityEngine;
 
 namespace UnityTemplateProjects
 {
@@ -124,7 +125,7 @@ namespace UnityTemplateProjects
             // Rotation
             if (Input.GetMouseButton(1))
             {
-                var mouseMovement = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y") * (invertY ? 1 : -1));
+                var mouseMovement = new Vector2(Input.GetAxis(AxisActionType.MouseX), Input.GetAxis(AxisActionType.MouseY) * (invertY ? 1 : -1));
                 
                 var mouseSensitivityFactor = mouseSensitivityCurve.Evaluate(mouseMovement.magnitude);
 

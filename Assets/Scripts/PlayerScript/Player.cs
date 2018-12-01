@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Shared.Enums;
 using UnityEngine;
 
 
@@ -43,16 +42,24 @@ public class Player : Creature
     public bool Fireballs { get { return m_unlockedFireballs; } }
     public bool Shield { get { return m_unlockedShield; } }
 
+    enum AnimationState {
+    Idle,
+    Run}
+    private AnimationState animation_state = AnimationState.Idle;
+    private CapsuleCollider2D m_collider;
+
     private new void Start()
     {
         base.Start();
         m_barbarian_animator = GetComponentInChildren<Animator>();
+        m_collider = gameObject.GetComponent<CapsuleCollider2D>();
     }
 
     private void Update()
     {
         Move();
         Jump();
+        CheckIfGrounded();
         PerformAction();
         Cooldown();
     }
@@ -70,7 +77,7 @@ public class Player : Creature
             return;
         }
 
-        float deltaX = Input.GetAxis("Horizontal");
+        float deltaX = Input.GetAxis(AxisActionType.Horizontal);
         m_barbarian_animator.SetFloat("MoveSpeed", Mathf.Abs(deltaX));
 
         if (deltaX < 0)
@@ -88,7 +95,7 @@ public class Player : Creature
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump") && m_isGrounded)
+        if (Input.GetButtonDown(InputButtonType.Jump) && m_isGrounded)
         {
             Vector2 jumpVector = Vector2.up * m_jumpForce;
 
@@ -102,21 +109,22 @@ public class Player : Creature
 
             m_rigidBody.AddForce(jumpVector, ForceMode2D.Impulse);
         }
+        m_isGrounded = false;
     }
 
     private void PerformAction()
     {
-        if (Input.GetButtonDown("Fire1") && m_weaponTime <= 0)
+        if (Input.GetButtonDown(InputButtonType.Fire1) && m_weaponTime <= 0)
         {
             MeleeAttack();
         }
-        else if (Input.GetButtonDown("Fire2") && m_unlockedFireballs && m_fireballTime <= 0)
+        else if (Input.GetButtonDown(InputButtonType.Fire2) && m_unlockedFireballs && m_fireballTime <= 0)
         {
             FireballAttack();
         }
         else if (m_unlockedShield)
         {
-            if (Input.GetButton("Fire3"))
+            if (Input.GetButton(InputButtonType.Fire3))
             {
                 m_shielded = true;
             }
@@ -168,11 +176,13 @@ public class Player : Creature
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag(GameCollisionType.Ground))
         {
-            m_isGrounded = true;
+            for (int i = 0; i < collision.contactCount; i++)
+                if (Mathf.Abs(collision.contacts[i].normal[1]) > 0.9f)
+                    m_isGrounded = true;
         }
-        else if (collision.gameObject.CompareTag("Platform"))
+        else if (collision.gameObject.CompareTag(GameCollisionType.Platform))
         {
             m_isGrounded = true;
             transform.parent = collision.transform;
@@ -181,11 +191,11 @@ public class Player : Creature
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag(GameCollisionType.Ground))
         {
             m_isGrounded = false;
         }
-        else if (collision.gameObject.CompareTag("Platform"))
+        else if (collision.gameObject.CompareTag(GameCollisionType.Platform))
         {
             m_isGrounded = false;
             transform.parent = null;
@@ -194,7 +204,7 @@ public class Player : Creature
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "EnemyDamageDealer")
+        if (collision.tag == CollisionType.EnemyDamageDealer)
         {
             if (m_shielded)
             {
@@ -203,6 +213,19 @@ public class Player : Creature
 
             Knockback();
             ProcessHit(collision.gameObject.GetComponent<DamageDealer>());
+        }
+    }
+
+    private void CheckIfGrounded()
+    {
+        if (m_isGrounded)
+            return;
+        ContactPoint2D[] contacts = new ContactPoint2D[10];
+        int colNum = m_collider.GetContacts(contacts);
+        for (int i = 0; i < colNum; i++)
+        {
+            if (contacts[i].normal[1] > 0.9f)
+                m_isGrounded = true;
         }
     }
 
@@ -236,7 +259,6 @@ public class Player : Creature
         {
             Instantiate(animationPrefab, transform.position, Quaternion.identity);
         }
-
     }
     public void Trigger_collect_item(Collectable_types item)
     {

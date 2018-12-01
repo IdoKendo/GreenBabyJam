@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Shared.Enums;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -43,8 +41,8 @@ public class SimpleCharacterMotor : MonoBehaviour
 
     void UpdateLookRotation()
     {
-        var x = Input.GetAxis("Mouse Y");
-        var y = Input.GetAxis("Mouse X");
+        var x = Input.GetAxis(AxisActionType.MouseY);
+        var y = Input.GetAxis(AxisActionType.MouseX);
 
         x *= invertY ? -1 : 1;
         targetRotation = transform.localRotation * Quaternion.AngleAxis(y * lookSpeed * Time.deltaTime, Vector3.up);
@@ -58,8 +56,8 @@ public class SimpleCharacterMotor : MonoBehaviour
     {
         if (controller.isGrounded)
         {
-            var x = Input.GetAxis("Horizontal");
-            var z = Input.GetAxis("Vertical");
+            var x = Input.GetAxis(AxisActionType.Horizontal);
+            var z = Input.GetAxis(AxisActionType.Vertical);
             var run = Input.GetKey(KeyCode.LeftShift);
 
             var translation = new Vector3(x, 0, z);
@@ -70,6 +68,7 @@ public class SimpleCharacterMotor : MonoBehaviour
         {
             movement.y -= gravity * Time.deltaTime;
         }
+
         finalMovement = Vector3.Lerp(finalMovement, movement, Time.deltaTime * movementAcceleration);
         controller.Move(finalMovement * Time.deltaTime);
     }

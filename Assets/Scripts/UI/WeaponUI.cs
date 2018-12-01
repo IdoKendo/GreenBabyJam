@@ -23,7 +23,7 @@ public class WeaponUI : MonoBehaviour {
         player = FindObjectOfType<Player>();
         setUI();
         weapons = GameObject.Find("WeaponUI");
-        WeaponUIPosition();
+        //WeaponUIPosition();
     }
 
     private void WeaponUIPosition()

@@ -18,6 +18,9 @@ public class Player : Creature
     [SerializeField] private float m_weaponCooldown = 1f;
     [SerializeField] private float m_fireballCooldown = 1f;
 
+    [Header("Death Animation")]
+    [SerializeField] private GameObject[] m_deathAnnimationArray;
+
     private Rigidbody2D m_rigidBody;
     private bool m_isGrounded;
     private float m_weaponTime = 0f;
@@ -157,5 +160,14 @@ public class Player : Creature
     public void UnlockShield()
     {
         m_unlockedShield = true;
+    }
+
+    protected override void DieAnimation()
+    {
+        foreach (GameObject animationPrefab in m_deathAnnimationArray)
+        {
+            Instantiate(animationPrefab, transform.position, Quaternion.identity);
+        }
+
     }
 }

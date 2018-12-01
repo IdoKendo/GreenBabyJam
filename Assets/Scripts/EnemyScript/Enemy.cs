@@ -13,13 +13,8 @@ public class Enemy : Creature
     [SerializeField] private float m_attackDistance = 0.1f;
     [SerializeField] private float m_attackCooldown = 1f;
 
-    private bool m_facingLeft = true;
-    private float m_attackTime = 0;
 
-    private void Start()
-    {
-        m_currHealth = m_maxHealth;
-    }
+    private float m_attackTime = 0;
     
     private void Update()
     {
@@ -45,7 +40,7 @@ public class Enemy : Creature
     private bool FindPlayer()
     {
         bool foundPlayer = true;
-        Vector2 direction = m_facingLeft ? Vector2.left : Vector2.right;
+        Vector2 direction = m_direction == EDirection.Left ? Vector2.left : Vector2.right;
         RaycastHit2D hit = Physics2D.Raycast(m_playerDetector.position, direction, m_attackDistance);
 
         Debug.DrawRay(m_playerDetector.position, direction, new Color(0, 0, 255));
@@ -76,16 +71,23 @@ public class Enemy : Creature
 
     private void Patrol()
     {
-        Vector2 direction = m_facingLeft ? new Vector2(-1, -0.5f) : new Vector2(1, -0.5f);
+        Vector2 direction = m_direction == EDirection.Left ? new Vector2(-1, -0.5f) : new Vector2(1, -0.5f);
         RaycastHit2D hit = Physics2D.Raycast(m_platformDetector.position, direction, 1f);
 
         Debug.DrawRay(m_platformDetector.position, direction, new Color(255, 0, 0));
 
         if (hit.collider == null)
         {
-            m_facingLeft = !m_facingLeft;
+            if (m_direction == EDirection.Left)
+            {
+                m_direction = EDirection.Right;
+            }
+            else
+            {
+                m_direction = EDirection.Left;
+            }
 
-            transform.localRotation = Quaternion.Euler(0, m_facingLeft ? 0 : 180, 0);
+            transform.localRotation = Quaternion.Euler(0, m_direction == EDirection.Left ? 0 : 180, 0);
         }
 
         Move();
@@ -97,7 +99,7 @@ public class Enemy : Creature
 
         transform.position = new Vector2()
         {
-            x = m_facingLeft ? transform.position.x - delta : transform.position.x + delta,
+            x = m_direction == EDirection.Left ? transform.position.x - delta : transform.position.x + delta,
             y = transform.position.y
         };
     }

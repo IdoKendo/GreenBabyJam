@@ -9,6 +9,14 @@ public class Creature : MonoBehaviour
     [SerializeField] internal float m_moveSpeed;
 
     internal float m_currHealth;
+    internal Rigidbody2D m_rigidBody;
+    internal EDirection m_direction = EDirection.Left;
+
+    private void Start()
+    {
+        m_currHealth = m_maxHealth;
+        m_rigidBody = GetComponent<Rigidbody2D>();
+    }
 
     internal void ProcessHit(DamageDealer damageDealer)
     {

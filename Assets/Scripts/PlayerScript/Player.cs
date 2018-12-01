@@ -6,6 +6,7 @@ public class Player : Creature
 {
     [Header("Player")]
     [SerializeField] private float m_jumpForce = 0.5f;
+    [SerializeField] private float m_knockbackPower = 3f;
 
     [Header("Weapons")]
     [SerializeField] private GameObject m_weaponPrefab;
@@ -18,7 +19,6 @@ public class Player : Creature
     [SerializeField] private float m_weaponCooldown = 1f;
     [SerializeField] private float m_fireballCooldown = 1f;
 
-    private Rigidbody2D m_rigidBody;
     private bool m_isGrounded;
     private float m_weaponTime = 0f;
     private float m_fireballTime = 0f;
@@ -29,12 +29,6 @@ public class Player : Creature
     public bool Fireballs { get { return m_unlockedFireballs; } }
     public bool Shield { get { return m_unlockedShield; } }
 
-    private void Start()
-    {
-        m_currHealth = m_maxHealth;
-        m_rigidBody = GetComponent<Rigidbody2D>();
-    }
-    
     private void Update()
     {
         Move();
@@ -53,8 +47,17 @@ public class Player : Creature
 
         float deltaX = Input.GetAxis("Horizontal");
 
+        if (deltaX < 0)
+        {
+            m_direction = EDirection.Right;
+        }
+        else if (deltaX > 0)
+        {
+            m_direction = EDirection.Left;
+        }
+
         m_rigidBody.velocity = new Vector2(deltaX * m_moveSpeed, m_rigidBody.velocity.y);
-        transform.localRotation = Quaternion.Euler(0, (deltaX  < 0) ? 180 : 0, 0);
+        transform.localRotation = Quaternion.Euler(0, m_direction == EDirection.Left ? 0 : 180, 0);
     }
 
     private void Jump()
@@ -145,8 +148,21 @@ public class Player : Creature
                 return;
             }
 
+            Knockback();
             ProcessHit(collision.gameObject.GetComponent<DamageDealer>());
         }
+    }
+
+    private void Knockback()
+    {
+        float knockbackPower = m_knockbackPower;
+
+        if (m_direction == EDirection.Left)
+        {
+            knockbackPower = -knockbackPower;
+        }
+
+        m_rigidBody.velocity = new Vector2(knockbackPower, m_rigidBody.velocity.y);
     }
 
     public void UnlockFireballs()

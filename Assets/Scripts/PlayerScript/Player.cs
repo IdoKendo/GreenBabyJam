@@ -1,6 +1,11 @@
 ﻿using Shared.Enums;
 using UnityEngine;
 
+
+public enum Collectable_types {
+    Fireball,
+    Shield
+}
 public class Player : Creature
 {
     [Header("Player")]
@@ -229,6 +234,19 @@ public class Player : Creature
         foreach (GameObject animationPrefab in m_deathAnnimationArray)
         {
             Instantiate(animationPrefab, transform.position, Quaternion.identity);
+        }
+    }
+    public void Trigger_collect_item(Collectable_types item)
+    {
+        switch (item)
+        {
+            case Collectable_types.Fireball:
+                this.UnlockFireballs();
+                break;
+            case Collectable_types.Shield:
+                break;
+            default:
+                break;
         }
     }
 }

@@ -69,26 +69,39 @@ public class Enemy : Creature
 
     private void Patrol()
     {
-        Vector2 direction = m_direction == EDirection.Left ? new Vector2(-1, -0.5f) : new Vector2(1, -0.5f);
-        RaycastHit2D hit = Physics2D.Raycast(m_platformDetector.position, direction, 1f);
+        Vector2 directionDown = m_direction == EDirection.Left ? new Vector2(-1, -0.5f) : new Vector2(1, -0.5f);
+        Vector2 directionForward = m_direction == EDirection.Left ? Vector2.left : Vector2.right;
+        RaycastHit2D hitDown = Physics2D.Raycast(m_platformDetector.position, directionDown, 1f);
+        RaycastHit2D hitForward = Physics2D.Raycast(m_platformDetector.position, directionForward, 1f);
 
-        Debug.DrawRay(m_platformDetector.position, direction, new Color(255, 0, 0));
+        Debug.DrawRay(m_platformDetector.position, directionDown, new Color(255, 0, 0));
+        Debug.DrawRay(m_platformDetector.position, directionForward, new Color(255, 0, 0));
 
-        if (hit.collider == null)
+        if (hitDown.collider == null)
         {
-            if (m_direction == EDirection.Left)
-            {
-                m_direction = EDirection.Right;
-            }
-            else
-            {
-                m_direction = EDirection.Left;
-            }
-
-            transform.localRotation = Quaternion.Euler(0, m_direction == EDirection.Left ? 0 : 180, 0);
+            ChangeDirection();
+        }
+        if (hitForward.collider != null)
+        {
+            if (hitForward.collider.tag == "Ground" || hitForward.collider.tag == "Enemy")
+                ChangeDirection();
         }
 
         Move();
+    }
+
+    private void ChangeDirection()
+    {
+        if (m_direction == EDirection.Left)
+        {
+            m_direction = EDirection.Right;
+        }
+        else
+        {
+            m_direction = EDirection.Left;
+        }
+
+        transform.localRotation = Quaternion.Euler(0, m_direction == EDirection.Left ? 0 : 180, 0);
     }
 
     private void Move()

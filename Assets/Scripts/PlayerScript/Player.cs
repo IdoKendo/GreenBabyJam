@@ -27,9 +27,10 @@ public class Player : Creature
     [SerializeField] private float m_fireballCooldown = 1f;
 
     [Header("Death Animation")]
-    private Animator m_barbarian_animator;
     [SerializeField] private GameObject[] m_deathAnnimationArray;
 
+    private Animator m_barbarianAnimator;
+    private CapsuleCollider2D m_collider;
     private bool m_isGrounded;
     private bool m_isKnockedBack = false;
     private float m_weaponTime = 0f;
@@ -42,16 +43,10 @@ public class Player : Creature
     public bool Fireballs { get { return m_unlockedFireballs; } }
     public bool Shield { get { return m_unlockedShield; } }
 
-    enum AnimationState {
-    Idle,
-    Run}
-    private AnimationState animation_state = AnimationState.Idle;
-    private CapsuleCollider2D m_collider;
-
     private new void Start()
     {
         base.Start();
-        m_barbarian_animator = GetComponentInChildren<Animator>();
+        m_barbarianAnimator = GetComponentInChildren<Animator>();
         m_collider = gameObject.GetComponent<CapsuleCollider2D>();
     }
 
@@ -78,7 +73,7 @@ public class Player : Creature
         }
 
         float deltaX = Input.GetAxis(AxisActionType.Horizontal);
-        m_barbarian_animator.SetFloat("MoveSpeed", Mathf.Abs(deltaX));
+        m_barbarianAnimator.SetFloat("MoveSpeed", Mathf.Abs(deltaX));
 
         if (deltaX < 0)
         {
@@ -243,16 +238,6 @@ public class Player : Creature
         m_rigidBody.velocity = new Vector2(knockbackPower, knockbackPower);
     }
 
-    public void UnlockFireballs()
-    {
-        m_unlockedFireballs = true;
-    }
-
-    public void UnlockShield()
-    {
-        m_unlockedShield = true;
-    }
-
     protected override void DieAnimation()
     {
         foreach (GameObject animationPrefab in m_deathAnnimationArray)
@@ -260,14 +245,15 @@ public class Player : Creature
             Instantiate(animationPrefab, transform.position, Quaternion.identity);
         }
     }
-    public void Trigger_collect_item(Collectable_types item)
+    public void TriggerCollectItem(Collectable_types item)
     {
         switch (item)
         {
             case Collectable_types.Fireball:
-                this.UnlockFireballs();
+                m_unlockedFireballs = true;
                 break;
             case Collectable_types.Shield:
+                m_unlockedShield = true;
                 break;
             default:
                 break;

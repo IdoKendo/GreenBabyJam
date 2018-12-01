@@ -3,30 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectable : MonoBehaviour {
-
-    [SerializeField] internal bool trigger_animation;
-    [SerializeField] internal Collectable_types collectable_type;
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+public class Collectable : MonoBehaviour
+{
+    [SerializeField] internal bool m_triggerAnimation;
+    [SerializeField] internal Collectable_types m_collectableType;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")// only players can trigger 
         {
-            if (trigger_animation)
+            if (m_triggerAnimation)
                 CollectionAnimation();
 
             var player = collision.GetComponent<Player>();
             if (player!=null) {
-                player.Trigger_collect_item(this.collectable_type);
+                player.TriggerCollectItem(this.m_collectableType);
             }
             Destroy(gameObject);
         }

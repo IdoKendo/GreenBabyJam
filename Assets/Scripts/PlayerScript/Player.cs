@@ -21,6 +21,7 @@ public class Player : Creature
     [SerializeField] private float m_fireballCooldown = 1f;
 
     [Header("Death Animation")]
+    private Animator m_barbarian_animator;
     [SerializeField] private GameObject[] m_deathAnnimationArray;
 
     private bool m_isGrounded;
@@ -33,6 +34,16 @@ public class Player : Creature
     public float Health { get { return m_currHealth; } }
     public bool Fireballs { get { return m_unlockedFireballs; } }
     public bool Shield { get { return m_unlockedShield; } }
+    enum AnimationState {
+    Idle,
+    Run}
+    private AnimationState animation_state = AnimationState.Idle;
+
+    private void Start()
+    {
+        base.Start();
+        m_barbarian_animator = GetComponentInChildren<Animator>();
+    }
 
     private void Update()
     {
@@ -56,7 +67,16 @@ public class Player : Creature
         }
 
         float deltaX = Input.GetAxis("Horizontal");
-
+        if (deltaX != 0 && animation_state!=AnimationState.Run) {
+            animation_state = AnimationState.Run;
+            m_barbarian_animator.SetTrigger("Run");
+        }
+        else if (deltaX == 0 && animation_state == AnimationState.Run)
+        {
+            animation_state = AnimationState.Idle;
+            m_barbarian_animator.ResetTrigger("Run");
+            m_barbarian_animator.SetTrigger("Idle");
+        }
         if (deltaX < 0)
         {
             m_direction = EDirection.Right;

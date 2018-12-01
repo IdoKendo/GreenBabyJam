@@ -12,7 +12,7 @@ public class Creature : MonoBehaviour
     internal Rigidbody2D m_rigidBody;
     internal EDirection m_direction = EDirection.Left;
 
-    private void Start()
+    internal void Start()
     {
         m_currHealth = m_maxHealth;
         m_rigidBody = GetComponent<Rigidbody2D>();

@@ -16,7 +16,8 @@ public class Burnable : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider2D)
     {
-        Burn();
+        if (collider2D.gameObject.name.ToLower().StartsWith("fireball"))
+            Burn();
     }
 
     void Burn()

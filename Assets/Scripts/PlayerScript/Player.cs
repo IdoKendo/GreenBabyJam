@@ -42,16 +42,24 @@ public class Player : Creature
     public bool Fireballs { get { return m_unlockedFireballs; } }
     public bool Shield { get { return m_unlockedShield; } }
 
+    enum AnimationState {
+    Idle,
+    Run}
+    private AnimationState animation_state = AnimationState.Idle;
+    private CapsuleCollider2D m_collider;
+
     private new void Start()
     {
         base.Start();
         m_barbarian_animator = GetComponentInChildren<Animator>();
+        m_collider = gameObject.GetComponent<CapsuleCollider2D>();
     }
 
     private void Update()
     {
         Move();
         Jump();
+        CheckIfGrounded();
         PerformAction();
         Cooldown();
     }
@@ -101,6 +109,7 @@ public class Player : Creature
 
             m_rigidBody.AddForce(jumpVector, ForceMode2D.Impulse);
         }
+        m_isGrounded = false;
     }
 
     private void PerformAction()
@@ -169,7 +178,9 @@ public class Player : Creature
     {
         if (collision.gameObject.CompareTag(GameCollisionType.Ground))
         {
-            m_isGrounded = true;
+            for (int i = 0; i < collision.contactCount; i++)
+                if (Mathf.Abs(collision.contacts[i].normal[1]) > 0.9f)
+                    m_isGrounded = true;
         }
         else if (collision.gameObject.CompareTag(GameCollisionType.Platform))
         {
@@ -202,6 +213,19 @@ public class Player : Creature
 
             Knockback();
             ProcessHit(collision.gameObject.GetComponent<DamageDealer>());
+        }
+    }
+
+    private void CheckIfGrounded()
+    {
+        if (m_isGrounded)
+            return;
+        ContactPoint2D[] contacts = new ContactPoint2D[10];
+        int colNum = m_collider.GetContacts(contacts);
+        for (int i = 0; i < colNum; i++)
+        {
+            if (contacts[i].normal[1] > 0.9f)
+                m_isGrounded = true;
         }
     }
 

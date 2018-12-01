@@ -11,7 +11,7 @@ public class SpawnEffect : MonoBehaviour {
     ParticleSystem ps;
     float timer = 0;
     Renderer _renderer;
-    int shaderProperty;
+    private int shaderProperty;
     private bool burning;
 
     void Start ()
@@ -27,8 +27,8 @@ public class SpawnEffect : MonoBehaviour {
     {
         burning = true;
     }
-	
-	void Update ()
+    
+    void Update ()
     {
         if (burning)
         {

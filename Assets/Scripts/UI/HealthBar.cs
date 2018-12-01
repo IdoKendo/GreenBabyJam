@@ -5,7 +5,6 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour {
 
     private Transform bar;
-    public Transform healthBar;
    
     private Player player;
 
@@ -14,7 +13,6 @@ public class HealthBar : MonoBehaviour {
     // Use this for initialization
     void Start () {
         bar = transform.Find("Bar");
-        healthBar = transform.Find("HealthBar");
         player = FindObjectOfType<Player>();
         
     }

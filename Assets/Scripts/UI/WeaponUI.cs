@@ -12,8 +12,8 @@ public class WeaponUI : MonoBehaviour {
 
     private Player player;
 
-    private const float weaponUIXPosition = 0.54f;
-    private const float weaponUIYPosition = 0.45f;
+    private const float weaponUIXPosition = -0.25f;
+    private const float weaponUIYPosition = 0.975f;
 
     // Use this for initialization
     void Start () {
@@ -29,6 +29,8 @@ public class WeaponUI : MonoBehaviour {
     private void WeaponUIPosition()
     {
         RectTransform weaponUIRect = weapons.transform as RectTransform;
+        weaponUIRect.anchoredPosition = Vector2.zero;
+        weaponUIRect.sizeDelta = Vector2.zero;
         weaponUIRect.anchorMax = new Vector2(weaponUIXPosition, weaponUIYPosition);
     }
 

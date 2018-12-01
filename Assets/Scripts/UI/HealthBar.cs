@@ -10,8 +10,8 @@ public class HealthBar : MonoBehaviour {
    
     private Player player;
 
-    private const float healthBarXPosition = 0.55f;
-    private const float healthBarYPosition = 0.54f;
+    private const float healthBarXPosition = -0.1f;
+    private const float healthBarYPosition = 1.32f;
 
     // Use this for initialization
     void Start () {
@@ -26,6 +26,8 @@ public class HealthBar : MonoBehaviour {
     private void HealthBarPosition()
     {
         RectTransform healthBarRect = healthBar.transform as RectTransform;
+        healthBarRect.anchoredPosition = Vector2.zero;
+        healthBarRect.sizeDelta = Vector2.zero;
         healthBarRect.anchorMax = new Vector2(healthBarXPosition, healthBarYPosition);
     }
 

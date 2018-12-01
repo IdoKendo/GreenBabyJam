@@ -172,6 +172,11 @@ public class Player : Creature
         {
             m_isGrounded = true;
         }
+        else if (collision.gameObject.CompareTag("Platform"))
+        {
+            m_isGrounded = true;
+            transform.parent = collision.transform;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -179,6 +184,11 @@ public class Player : Creature
         if (collision.gameObject.CompareTag("Ground"))
         {
             m_isGrounded = false;
+        }
+        else if (collision.gameObject.CompareTag("Platform"))
+        {
+            m_isGrounded = false;
+            transform.parent = null;
         }
     }
 

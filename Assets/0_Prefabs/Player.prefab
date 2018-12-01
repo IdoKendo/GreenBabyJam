@@ -1876,7 +1876,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351280707877086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.39, y: 11.2, z: -0.5}
+  m_LocalPosition: {x: 2.39, y: 5.2, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4316863619536746}
@@ -3378,17 +3378,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_maxHealth: 400
-  m_moveSpeed: 10
-  m_jumpForce: 10
+  m_moveSpeed: 5
+  m_jumpForce: 5
   m_knockbackPower: 6
   m_knockbckDuration: 0.5
   m_weaponPrefab: {fileID: 1090602974830292, guid: 34fea82aeaffc3e4bade3a336a38732f,
     type: 2}
   m_unlockedFireballs: 0
+  m_fireballSelfDamage: 20
   m_fireballPrefab: {fileID: 1580899883064176, guid: 793a13a4673a14242aceccce152d331c,
     type: 2}
   m_unlockedShield: 0
   m_superJumpModifier: 1.5
+  m_superJumpSelfDamage: 20
   m_weaponCooldown: 1
   m_fireballCooldown: 1
   m_deathAnnimationArray:

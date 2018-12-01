@@ -68,16 +68,8 @@ public class Player : Creature
         }
 
         float deltaX = Input.GetAxis("Horizontal");
-        if (deltaX != 0 && animation_state!=AnimationState.Run) {
-            animation_state = AnimationState.Run;
-            m_barbarian_animator.SetTrigger("Run");
-        }
-        else if (deltaX == 0 && animation_state == AnimationState.Run)
-        {
-            animation_state = AnimationState.Idle;
-            m_barbarian_animator.ResetTrigger("Run");
-            m_barbarian_animator.SetTrigger("Idle");
-        }
+        m_barbarian_animator.SetFloat("MoveSpeed", Mathf.Abs(deltaX));
+
         if (deltaX < 0)
         {
             m_direction = EDirection.Right;
@@ -87,6 +79,7 @@ public class Player : Creature
             m_direction = EDirection.Left;
         }
 
+       // transform.Translate(new Vector3(deltaX * m_moveSpeed*Time.deltaTime, 0, 0));
         m_rigidBody.velocity = new Vector2(deltaX * m_moveSpeed, m_rigidBody.velocity.y);
         transform.localRotation = Quaternion.Euler(0, m_direction == EDirection.Left ? 0 : 180, 0);
     }

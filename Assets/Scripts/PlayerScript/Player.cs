@@ -7,6 +7,7 @@ public class Player : Creature
     [Header("Player")]
     [SerializeField] private float m_jumpForce = 0.5f;
     [SerializeField] private float m_knockbackPower = 3f;
+    [SerializeField] private float m_knockbckDuration = 0.5f;
 
     [Header("Weapons")]
     [SerializeField] private GameObject m_weaponPrefab;
@@ -25,6 +26,7 @@ public class Player : Creature
     private bool m_isGrounded;
     private float m_weaponTime = 0f;
     private float m_fireballTime = 0f;
+    private float m_knockbackTime = 0f;
     private bool m_shielded = false;
 
     public float MaxHealth { get { return m_maxHealth; } }
@@ -45,6 +47,11 @@ public class Player : Creature
         if (m_shielded)
         {
             m_rigidBody.velocity = new Vector2(0, m_rigidBody.velocity.y);
+            return;
+        }
+
+        if (m_rigidBody.isKinematic)
+        {
             return;
         }
 
@@ -112,6 +119,16 @@ public class Player : Creature
         {
             m_fireballTime -= Time.deltaTime;
         }
+
+        if (m_rigidBody.isKinematic)
+        {
+            m_knockbackTime -= Time.deltaTime;
+
+            if (m_knockbackTime <= 0)
+            {
+                m_rigidBody.isKinematic = false;
+            }
+        }
     }
 
     private void MeleeAttack()
@@ -163,8 +180,10 @@ public class Player : Creature
         if (m_direction == EDirection.Left)
         {
             knockbackPower = -knockbackPower;
-        }
 
+        }
+        m_rigidBody.isKinematic = true;
+        m_knockbackTime = m_knockbckDuration;
         m_rigidBody.velocity = new Vector2(knockbackPower, m_rigidBody.velocity.y);
     }
 

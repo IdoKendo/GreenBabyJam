@@ -1,0 +1,2444 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.40208694, g: 0.5342432, b: 0.8161765, a: 1}
+  m_AmbientEquatorColor: {r: 0.6911765, g: 0.54379326, b: 0.6078287, a: 1}
+  m_AmbientGroundColor: {r: 0.5661765, g: 0.45420444, b: 0.40381703, a: 1}
+  m_AmbientIntensity: 1.64
+  m_AmbientMode: 1
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 0.089
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.089}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
+  m_LightmapEditorSettings:
+    serializedVersion: 10
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 1
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVRFilteringMode: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 0
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &5399960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1158285987010536, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5399961}
+  m_Layer: 0
+  m_Name: Pterodactyl R Forearm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5399961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4107107293736636, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 5399960}
+  m_LocalRotation: {x: -0.0000000037221437, y: -0.000000016238888, z: 0.23607825,
+    w: 0.97173405}
+  m_LocalPosition: {x: -0.48488212, y: -0.000000019073486, z: 0.000000038146972}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+  m_Children:
+  - {fileID: 853764299}
+  m_Father: {fileID: 2067915693}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9488479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1630546585255268, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9488480}
+  m_Layer: 0
+  m_Name: Pterodactyl L UpperArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9488480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4941343104712034, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 9488479}
+  m_LocalRotation: {x: -0.6073404, y: -0.13888213, z: 0.015493123, w: 0.78205466}
+  m_LocalPosition: {x: -0.25339898, y: 0.000000038146972, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_Children:
+  - {fileID: 239261211}
+  m_Father: {fileID: 791667048}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &60280465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 60280467}
+  - component: {fileID: 60280466}
+  m_Layer: 0
+  m_Name: Back Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &60280466
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 60280465}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 0.5955882, g: 1, b: 0.9163286, a: 1}
+  m_Intensity: 0.86
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &60280467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 60280465}
+  m_LocalRotation: {x: -0.33966783, y: -0.10666396, z: -0.0030588065, w: -0.9344727}
+  m_LocalPosition: {x: -2.08, y: 3.38, z: -3.39}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 39.358, y: -344.9, z: 5.8030005}
+--- !u!1 &88578621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1204140633696076, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 88578622}
+  m_Layer: 0
+  m_Name: Pterodactyl L Finger0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &88578622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4340354348343236, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 88578621}
+  m_LocalRotation: {x: 0.059063274, y: -0.7732101, z: -0.23666663, w: 0.58536017}
+  m_LocalPosition: {x: -0.10889801, y: -0.035707932, z: -0.09353218}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+  m_Children:
+  - {fileID: 473704246}
+  m_Father: {fileID: 1240196251}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &190486226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1949359962209104, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 190486227}
+  m_Layer: 0
+  m_Name: Pterodactyl Tail2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &190486227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4867551172874214, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 190486226}
+  m_LocalRotation: {x: 3.760403e-14, y: 0.00000018217241, z: -0.06568084, w: 0.9978407}
+  m_LocalPosition: {x: -0.2946309, y: -0.000206604, z: -5.7319993e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1526842633}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &239261210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1803122997244638, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 239261211}
+  m_Layer: 0
+  m_Name: Pterodactyl L Forearm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &239261211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4308602858535352, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 239261210}
+  m_LocalRotation: {x: 0.000000005481067, y: 0.000000008998899, z: 0.23607782, w: 0.97173417}
+  m_LocalPosition: {x: -0.48488215, y: -0.000000019073486, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1240196251}
+  m_Father: {fileID: 9488480}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &274782377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1191612889608238, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 274782378}
+  m_Layer: 0
+  m_Name: Pterodactyl R Lower Eyelid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &274782378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4297538338064970, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 274782377}
+  m_LocalRotation: {x: 0.34997243, y: 0.5160199, z: 0.7158935, w: -0.31422815}
+  m_LocalPosition: {x: -0.3704229, y: 0.24993782, z: -0.13982196}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 1175130910}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &280235191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1900939689957242, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 280235192}
+  m_Layer: 0
+  m_Name: Pterodactyl R Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &280235192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4405629716483232, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 280235191}
+  m_LocalRotation: {x: -0.07968269, y: 0.05366478, z: -0.031152211, w: 0.9948871}
+  m_LocalPosition: {x: -0.24600533, y: 0, z: 0.000000019073486}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1258678860}
+  m_Father: {fileID: 1574942084}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &348005496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1239333187422982, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 348005497}
+  - component: {fileID: 348005499}
+  - component: {fileID: 348005498}
+  m_Layer: 0
+  m_Name: Eye Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &348005497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4527332618952500, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 348005496}
+  m_LocalRotation: {x: -0.5440259, y: -0.33537477, z: 0.6901507, w: 0.3394873}
+  m_LocalPosition: {x: -0.3623448, y: 0.24468207, z: 0.13149261}
+  m_LocalScale: {x: 1.0000001, y: 1.0000002, z: 1.0000004}
+  m_Children: []
+  m_Father: {fileID: 1175130910}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &348005498
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 23251756640841526, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 348005496}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 56f0ee2faa335cb4bb6ff463213f131a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &348005499
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 33358351840128128, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 348005496}
+  m_Mesh: {fileID: 4300004, guid: 33c5b1a570239784dbdf5fa4ce50ef45, type: 3}
+--- !u!1 &473704245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1780024129561588, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 473704246}
+  m_Layer: 0
+  m_Name: Pterodactyl L Finger01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &473704246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4589549055881322, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 473704245}
+  m_LocalRotation: {x: -0.000000009014512, y: -0.00000002504424, z: -0.06175959, w: 0.9980911}
+  m_LocalPosition: {x: -0.14959884, y: -0.000000076293944, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 88578622}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &486419777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1184650278135446, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486419778}
+  m_Layer: 0
+  m_Name: Pterodactyl L Finger2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &486419778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4645961879796044, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 486419777}
+  m_LocalRotation: {x: 0.031426933, y: 0.3354996, z: -0.07445235, w: 0.93856764}
+  m_LocalPosition: {x: -0.30422544, y: 0.017230606, z: 0.060660284}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 2025783344}
+  m_Father: {fileID: 1240196251}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &486768348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1288614360340348, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486768349}
+  m_Layer: 0
+  m_Name: Pterodactyl L Calf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &486768349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4346449614930564, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 486768348}
+  m_LocalRotation: {x: 0.000000027451385, y: -0.000000038299707, z: 0.29564446, w: 0.95529807}
+  m_LocalPosition: {x: -0.35649866, y: 0.000000019073486, z: 0}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 1895485864}
+  m_Father: {fileID: 1318855060}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &545374118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1652156930386450, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545374119}
+  m_Layer: 0
+  m_Name: Pterodactyl R Eyebrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545374119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4662533028236306, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 545374118}
+  m_LocalRotation: {x: 0.102172226, y: -0.18155359, z: 0.479, w: 0.8527357}
+  m_LocalPosition: {x: -0.43317977, y: 0.4155976, z: -0.2079103}
+  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1175130910}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &605077886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1814787361876918, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 605077887}
+  m_Layer: 0
+  m_Name: Pterodactyl L Lower Eyelid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &605077887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4322271024710956, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 605077886}
+  m_LocalRotation: {x: -0.34997246, y: -0.5160238, z: 0.71589065, w: -0.31422806}
+  m_LocalPosition: {x: -0.3704229, y: 0.24993698, z: 0.13982333}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1175130910}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &747456400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1078214625476550, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 747456401}
+  - component: {fileID: 747456402}
+  m_Layer: 0
+  m_Name: Pterodactyl Mesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &747456401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4133627219002150, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 747456400}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1277780667}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &747456402
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 137894998664329658, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 747456400}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: da3fa80acfa7cd6438138cd551bebac5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300000, guid: 33c5b1a570239784dbdf5fa4ce50ef45, type: 3}
+  m_Bones:
+  - {fileID: 822297521}
+  - {fileID: 892927786}
+  - {fileID: 1175130910}
+  - {fileID: 1021560109}
+  - {fileID: 791667048}
+  - {fileID: 9488480}
+  - {fileID: 1153634650}
+  - {fileID: 1554644689}
+  - {fileID: 1318855060}
+  - {fileID: 1814365785}
+  - {fileID: 239261211}
+  - {fileID: 1902930290}
+  - {fileID: 605077887}
+  - {fileID: 2065904847}
+  - {fileID: 2102415399}
+  - {fileID: 1526842633}
+  - {fileID: 190486227}
+  - {fileID: 486768349}
+  - {fileID: 1895485864}
+  - {fileID: 1891899881}
+  - {fileID: 1240196251}
+  - {fileID: 486419778}
+  - {fileID: 2025783344}
+  - {fileID: 88578622}
+  - {fileID: 1712745183}
+  - {fileID: 924481535}
+  - {fileID: 473704246}
+  - {fileID: 1241851648}
+  - {fileID: 1051586054}
+  - {fileID: 1165872659}
+  - {fileID: 1443893230}
+  - {fileID: 2067915693}
+  - {fileID: 1844628268}
+  - {fileID: 5399961}
+  - {fileID: 545374119}
+  - {fileID: 274782378}
+  - {fileID: 1959994315}
+  - {fileID: 1574942084}
+  - {fileID: 280235192}
+  - {fileID: 1258678860}
+  - {fileID: 853764299}
+  - {fileID: 906982704}
+  - {fileID: 1762024842}
+  - {fileID: 1950464983}
+  - {fileID: 842456008}
+  - {fileID: 890067830}
+  - {fileID: 1367972454}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1814365785}
+  m_AABB:
+    m_Center: {x: -0.1829642, y: 0.7241313, z: 0.0000009536743}
+    m_Extent: {x: 1.0572954, y: 1.882601, z: 2.7249227}
+  m_DirtyAABB: 0
+--- !u!1 &791667047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1310862085255450, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791667048}
+  m_Layer: 0
+  m_Name: Pterodactyl L Clavicle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &791667048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4567021956724652, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 791667047}
+  m_LocalRotation: {x: -0.69953746, y: -0.103186205, z: 0.6996194, w: 0.10262915}
+  m_LocalPosition: {x: -0.123898275, y: -0.11332847, z: 0.039673675}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9488480}
+  m_Father: {fileID: 892927786}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &822297520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1090778849150198, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 822297521}
+  m_Layer: 0
+  m_Name: Pterodactyl Neck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &822297521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4735842799872908, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 822297520}
+  m_LocalRotation: {x: -0.0005242545, y: 0.0116799325, z: -0.04404189, w: 0.99896127}
+  m_LocalPosition: {x: -0.21671711, y: -0.00023910523, z: 0.0000004953831}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1175130910}
+  m_Father: {fileID: 892927786}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &842456007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1651879548176316, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 842456008}
+  m_Layer: 0
+  m_Name: Pterodactyl R Finger1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &842456008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4298763598372208, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 842456007}
+  m_LocalRotation: {x: -0.15096703, y: 0.55144596, z: -0.22563903, w: 0.78879875}
+  m_LocalPosition: {x: -0.24264038, y: -0.012745208, z: 0.07282337}
+  m_LocalScale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+  m_Children:
+  - {fileID: 890067830}
+  m_Father: {fileID: 853764299}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &853764298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1048905519299890, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 853764299}
+  m_Layer: 0
+  m_Name: Pterodactyl R Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &853764299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4167472519107564, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 853764298}
+  m_LocalRotation: {x: 0.8454463, y: -0.077849045, z: -0.046990324, w: 0.52626234}
+  m_LocalPosition: {x: -0.7618926, y: 0.000000047683713, z: -0.000000038146972}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_Children:
+  - {fileID: 1950464983}
+  - {fileID: 842456008}
+  - {fileID: 906982704}
+  m_Father: {fileID: 5399961}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &890067829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1475854887578714, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890067830}
+  m_Layer: 0
+  m_Name: Pterodactyl R Finger11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &890067830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4056494181357970, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 890067829}
+  m_LocalRotation: {x: 4.1287726e-10, y: 0.0000000046382733, z: -0.088664725, w: 0.99606156}
+  m_LocalPosition: {x: -0.14781334, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 842456008}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &892927785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1863181605003460, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892927786}
+  m_Layer: 0
+  m_Name: Pterodactyl Spine2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &892927786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4512265728463102, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 892927785}
+  m_LocalRotation: {x: 2.2186688e-13, y: 0.00000021112079, z: -0.07611796, w: 0.99709886}
+  m_LocalPosition: {x: -0.21672222, y: -0.00017055511, z: -4.7308274e-10}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 791667048}
+  - {fileID: 822297521}
+  - {fileID: 1443893230}
+  m_Father: {fileID: 1153634650}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &906982703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1083353425702014, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906982704}
+  m_Layer: 0
+  m_Name: Pterodactyl R Finger2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &906982704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4899806044218702, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 906982703}
+  m_LocalRotation: {x: -0.031426888, y: -0.33549958, z: -0.07445232, w: 0.9385677}
+  m_LocalPosition: {x: -0.30422544, y: 0.017230492, z: -0.06066021}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 1762024842}
+  m_Father: {fileID: 853764299}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &920014123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1702363564947400, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920014124}
+  - component: {fileID: 920014126}
+  - component: {fileID: 920014125}
+  m_Layer: 0
+  m_Name: Eye Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &920014124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4259438369008292, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 920014123}
+  m_LocalRotation: {x: 0.7199907, y: -0.29389346, z: -0.54495037, w: 0.31347924}
+  m_LocalPosition: {x: -0.36234435, y: 0.24468239, z: -0.13472413}
+  m_LocalScale: {x: 1.0000001, y: 0.99999976, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 1175130910}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &920014125
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 23947975707355676, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 920014123}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 56f0ee2faa335cb4bb6ff463213f131a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &920014126
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 33363901014493428, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 920014123}
+  m_Mesh: {fileID: 4300002, guid: 33c5b1a570239784dbdf5fa4ce50ef45, type: 3}
+--- !u!1 &924481534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1775069994398404, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 924481535}
+  m_Layer: 0
+  m_Name: Pterodactyl L Finger11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &924481535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4106255701359358, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 924481534}
+  m_LocalRotation: {x: -0.0000000066780586, y: 0.000000009009497, z: -0.088664725,
+    w: 0.99606156}
+  m_LocalPosition: {x: -0.14781341, y: 0, z: 0.00000015258789}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1712745183}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1021560108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1878310510268500, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1021560109}
+  m_Layer: 0
+  m_Name: Pterodactyl Jaw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1021560109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4278339047623252, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1021560108}
+  m_LocalRotation: {x: 1.5457265e-12, y: 0.00000239483, z: -0.86343765, w: 0.50445557}
+  m_LocalPosition: {x: -0.14130935, y: 0.16449364, z: 0.00000030303758}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 1241851648}
+  m_Father: {fileID: 1175130910}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1051586053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1267842955659378, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051586054}
+  m_Layer: 0
+  m_Name: Pterodactyl Tongue02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1051586054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4903390228520162, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1051586053}
+  m_LocalRotation: {x: -1.3778427e-13, y: 0.0000004944951, z: -0.17828639, w: 0.9839787}
+  m_LocalPosition: {x: -0.16979606, y: -0.00011146545, z: -3.0937372e-10}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 1165872659}
+  m_Father: {fileID: 1241851648}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1065914268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065914272}
+  - component: {fileID: 1065914271}
+  - component: {fileID: 1065914270}
+  - component: {fileID: 1065914269}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1065914269
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065914268}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 531ce9bafc41f834da293466020edcc9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1065914270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065914268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1065914271
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065914268}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1065914272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065914268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.05, y: -0.512, z: 0.33}
+  m_LocalScale: {x: 50, y: 1, z: 50}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1150060590
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4147913787176982, guid: 2fe5c613f088dde4c8ae644d7f23e111, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147913787176982, guid: 2fe5c613f088dde4c8ae644d7f23e111, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147913787176982, guid: 2fe5c613f088dde4c8ae644d7f23e111, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147913787176982, guid: 2fe5c613f088dde4c8ae644d7f23e111, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147913787176982, guid: 2fe5c613f088dde4c8ae644d7f23e111, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147913787176982, guid: 2fe5c613f088dde4c8ae644d7f23e111, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147913787176982, guid: 2fe5c613f088dde4c8ae644d7f23e111, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147913787176982, guid: 2fe5c613f088dde4c8ae644d7f23e111, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2fe5c613f088dde4c8ae644d7f23e111, type: 2}
+  m_RootGameObject: {fileID: 1277780665}
+  m_IsPrefabAsset: 0
+--- !u!1 &1153634649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1177441150082896, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153634650}
+  m_Layer: 0
+  m_Name: Pterodactyl Spine1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1153634650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4266534926638628, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1153634649}
+  m_LocalRotation: {x: -2.28382e-14, y: 0.00000021112066, z: -0.076117925, w: 0.99709886}
+  m_LocalPosition: {x: -0.21672224, y: -0.00017055511, z: -4.7308274e-10}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 892927786}
+  m_Father: {fileID: 1554644689}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1160563184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1160563189}
+  - component: {fileID: 1160563188}
+  - component: {fileID: 1160563187}
+  - component: {fileID: 1160563186}
+  - component: {fileID: 1160563185}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1160563185
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160563184}
+  m_Enabled: 1
+--- !u!124 &1160563186
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160563184}
+  m_Enabled: 1
+--- !u!92 &1160563187
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160563184}
+  m_Enabled: 1
+--- !u!20 &1160563188
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160563184}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.1544118, g: 0.13397494, b: 0.13397494, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 30
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1160563189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160563184}
+  m_LocalRotation: {x: -0.0260497, y: 0.8887833, z: -0.050913174, w: -0.45474565}
+  m_LocalPosition: {x: 6.09, y: 2.29, z: 4.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 6.557, y: 234.193, z: 0}
+--- !u!1 &1165872658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1201713506209200, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1165872659}
+  m_Layer: 0
+  m_Name: Pterodactyl Tongue03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1165872659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4114731407761712, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1165872658}
+  m_LocalRotation: {x: 4.0655457e-14, y: -0.00000014774504, z: 0.05326829, w: 0.9985802}
+  m_LocalPosition: {x: -0.14949234, y: -0.00010696411, z: -2.9685907e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1051586054}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1175130909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1155775315428510, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175130910}
+  m_Layer: 0
+  m_Name: Pterodactyl Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1175130910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4881629582336904, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1175130909}
+  m_LocalRotation: {x: -0.0050615766, y: -0.010540549, z: 0.5112248, w: 0.8593675}
+  m_LocalPosition: {x: -0.465672, y: 0.08247034, z: -0.010678506}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 348005497}
+  - {fileID: 920014124}
+  - {fileID: 1721941058}
+  - {fileID: 1626751537}
+  - {fileID: 1021560109}
+  - {fileID: 1902930290}
+  - {fileID: 605077887}
+  - {fileID: 2065904847}
+  - {fileID: 545374119}
+  - {fileID: 274782378}
+  - {fileID: 1959994315}
+  m_Father: {fileID: 822297521}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1208183771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1208183773}
+  - component: {fileID: 1208183772}
+  m_Layer: 0
+  m_Name: Main Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1208183772
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1208183771}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 0.8178499, g: 0.875, b: 0.72702205, a: 1}
+  m_Intensity: 1.13
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1208183773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1208183771}
+  m_LocalRotation: {x: 0.08062169, y: -0.8949574, z: 0.39454642, w: 0.19205347}
+  m_LocalPosition: {x: 1.15, y: 2.97, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 47.491, y: -155.50601, z: 0.614}
+--- !u!1 &1240196250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1133249439064968, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1240196251}
+  m_Layer: 0
+  m_Name: Pterodactyl L Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1240196251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4264078408773464, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1240196250}
+  m_LocalRotation: {x: -0.8454464, y: 0.07784876, z: -0.046990134, w: 0.5262622}
+  m_LocalPosition: {x: -0.7618924, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1.0000001}
+  m_Children:
+  - {fileID: 88578622}
+  - {fileID: 1712745183}
+  - {fileID: 486419778}
+  m_Father: {fileID: 239261211}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1241851647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1402374250196496, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1241851648}
+  m_Layer: 0
+  m_Name: Pterodactyl Tongue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1241851648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4850634978887636, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1241851647}
+  m_LocalRotation: {x: -9.570285e-15, y: -0.00000063525124, z: 0.2290349, w: 0.97341824}
+  m_LocalPosition: {x: -0.2352661, y: 0.03459404, z: 0.00000054164815}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 1051586054}
+  m_Father: {fileID: 1021560109}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1258678859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1006763922586622, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1258678860}
+  m_Layer: 0
+  m_Name: Pterodactyl R Toe0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1258678860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4260384962303090, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1258678859}
+  m_LocalRotation: {x: 0.00000001961821, y: 0.000000007695135, z: -0.40007198, w: 0.9164837}
+  m_LocalPosition: {x: -0.11933014, y: 0.20820469, z: 0.000000057220458}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 280235192}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1277780665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1853389327815854, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277780667}
+  - component: {fileID: 1277780666}
+  m_Layer: 0
+  m_Name: Pterodactyl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1277780666
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 95068301447277234, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1277780665}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 33c5b1a570239784dbdf5fa4ce50ef45, type: 3}
+  m_Controller: {fileID: 9100000, guid: b51c1a8e405cd834c9654b1ea23e26ab, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &1277780667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4147913787176982, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1277780665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1425751053}
+  - {fileID: 747456401}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1318855059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1368001429439902, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1318855060}
+  m_Layer: 0
+  m_Name: Pterodactyl L Thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1318855060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4452344543556062, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1318855059}
+  m_LocalRotation: {x: 0.058223404, y: 0.9269733, z: 0.2085825, w: 0.30630705}
+  m_LocalPosition: {x: 0.00000030994414, y: 0.00000032424927, z: 0.23302998}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_Children:
+  - {fileID: 486768349}
+  m_Father: {fileID: 1814365785}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1367972453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1029742274580598, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1367972454}
+  m_Layer: 0
+  m_Name: Pterodactyl R Finger01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1367972454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4110910060769772, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1367972453}
+  m_LocalRotation: {x: 1.6176975e-10, y: 0.0000000026143452, z: -0.06175961, w: 0.9980911}
+  m_LocalPosition: {x: -0.14959893, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999998, y: 0.9999999, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 1950464983}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1425751052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1366612310478112, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425751053}
+  m_Layer: 0
+  m_Name: Pterodactyl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1425751053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4115221750899806, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1425751052}
+  m_LocalRotation: {x: -0.50000036, y: 0.4999997, z: 0.4999997, w: 0.50000036}
+  m_LocalPosition: {x: -0.000000006265765, y: 0.054000013, z: -0.30033}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1814365785}
+  m_Father: {fileID: 1277780667}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1443893229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1977568336731336, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1443893230}
+  m_Layer: 0
+  m_Name: Pterodactyl R Clavicle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1443893230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4853087146761994, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1443893229}
+  m_LocalRotation: {x: 0.6995377, y: 0.10318425, z: 0.69961965, w: 0.10262723}
+  m_LocalPosition: {x: -0.1238982, y: -0.113328286, z: -0.039674304}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2067915693}
+  m_Father: {fileID: 892927786}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1526842632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1583991334034764, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526842633}
+  m_Layer: 0
+  m_Name: Pterodactyl Tail1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1526842633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4047851863155026, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1526842632}
+  m_LocalRotation: {x: 2.9837633e-15, y: 0.00000005893455, z: -0.021248376, w: 0.9997742}
+  m_LocalPosition: {x: -0.29461363, y: -0.0002343893, z: -6.502523e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 190486227}
+  m_Father: {fileID: 2102415399}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1554644688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1038749988124674, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1554644689}
+  m_Layer: 0
+  m_Name: Pterodactyl Spine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1554644689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4847162644844768, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1554644688}
+  m_LocalRotation: {x: -0.0000021699452, y: 0.00000093102534, z: -0.44932988, w: 0.8933659}
+  m_LocalPosition: {x: -0.06744759, y: 0.067101516, z: -0.000000094588685}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 1153634650}
+  m_Father: {fileID: 1814365785}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1574942083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1175253179539112, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1574942084}
+  m_Layer: 0
+  m_Name: Pterodactyl R Calf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1574942084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4573801965540120, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1574942083}
+  m_LocalRotation: {x: -0.0000000064428796, y: -0.000000079986144, z: 0.29564437,
+    w: 0.95529807}
+  m_LocalPosition: {x: -0.35649863, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 280235192}
+  m_Father: {fileID: 1844628268}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1626751536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1219875932066738, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1626751537}
+  - component: {fileID: 1626751539}
+  - component: {fileID: 1626751538}
+  m_Layer: 0
+  m_Name: Eye Shine Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1626751537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4256679728818996, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1626751536}
+  m_LocalRotation: {x: 0.07152198, y: -0.18914743, z: 0.9793162, w: 0.0069065117}
+  m_LocalPosition: {x: -0.3700026, y: 0.28532508, z: -0.23922366}
+  m_LocalScale: {x: 0.99999964, y: 1.5000002, z: 0.99999976}
+  m_Children: []
+  m_Father: {fileID: 1175130910}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1626751538
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 23152002206437446, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1626751536}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 406b38876b98f994ebcbb50e90ee8793, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1626751539
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 33868669018375848, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1626751536}
+  m_Mesh: {fileID: 4300008, guid: 33c5b1a570239784dbdf5fa4ce50ef45, type: 3}
+--- !u!1 &1712745182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1227543184635508, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1712745183}
+  m_Layer: 0
+  m_Name: Pterodactyl L Finger1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1712745183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4923028218176326, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1712745182}
+  m_LocalRotation: {x: 0.15096702, y: -0.55144596, z: -0.22563899, w: 0.7887987}
+  m_LocalPosition: {x: -0.24264038, y: -0.012745246, z: -0.072823405}
+  m_LocalScale: {x: 1.0000004, y: 1.0000004, z: 1.0000001}
+  m_Children:
+  - {fileID: 924481535}
+  m_Father: {fileID: 1240196251}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1721941057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1035282508175236, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1721941058}
+  - component: {fileID: 1721941060}
+  - component: {fileID: 1721941059}
+  m_Layer: 0
+  m_Name: Eye Shine Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1721941058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4182109698797654, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1721941057}
+  m_LocalRotation: {x: -0.13395327, y: -0.07547372, z: -0.047837004, w: 0.9869508}
+  m_LocalPosition: {x: -0.38106987, y: 0.27219978, z: 0.23161426}
+  m_LocalScale: {x: 0.9999999, y: 1.5000008, z: 0.9999999}
+  m_Children: []
+  m_Father: {fileID: 1175130910}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1721941059
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 23943048355728720, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1721941057}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 406b38876b98f994ebcbb50e90ee8793, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1721941060
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 33629881952811892, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1721941057}
+  m_Mesh: {fileID: 4300006, guid: 33c5b1a570239784dbdf5fa4ce50ef45, type: 3}
+--- !u!1 &1762024841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1272941252583358, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1762024842}
+  m_Layer: 0
+  m_Name: Pterodactyl R Finger21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1762024842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4650128048029496, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1762024841}
+  m_LocalRotation: {x: 0.0000000296498, y: -0.000000008036088, z: -0.019694898, w: 0.99980605}
+  m_LocalPosition: {x: -0.5752319, y: 0.000000076293944, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 906982704}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1814365784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1580850613738916, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1814365785}
+  m_Layer: 0
+  m_Name: Pterodactyl Pelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1814365785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4340854198615616, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1814365784}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.4999993, w: 0.5000007}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1318855060}
+  - {fileID: 1844628268}
+  - {fileID: 1554644689}
+  - {fileID: 2102415399}
+  m_Father: {fileID: 1425751053}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1844628267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1232131955700202, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844628268}
+  m_Layer: 0
+  m_Name: Pterodactyl R Thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1844628268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4387821002253498, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1844628267}
+  m_LocalRotation: {x: 0.058222733, y: 0.9269726, z: -0.20858353, w: -0.30630827}
+  m_LocalPosition: {x: -0.00000033855437, y: -0.00000032424927, z: -0.23303}
+  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 1574942084}
+  m_Father: {fileID: 1814365785}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1891899880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1483504780936180, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1891899881}
+  m_Layer: 0
+  m_Name: Pterodactyl L Toe0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1891899881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4354965231814720, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1891899880}
+  m_LocalRotation: {x: -0.000000020485006, y: 0.000000008942305, z: -0.40007198, w: 0.9164837}
+  m_LocalPosition: {x: -0.11933029, y: 0.20820478, z: -0.000000019073486}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1895485864}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1895485863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1386344644571618, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1895485864}
+  m_Layer: 0
+  m_Name: Pterodactyl L Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1895485864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4989089741404342, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1895485863}
+  m_LocalRotation: {x: 0.07968288, y: -0.05366462, z: -0.03115316, w: 0.99488705}
+  m_LocalPosition: {x: -0.24600533, y: -0.000000028610229, z: -0.000000019073486}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 1891899881}
+  m_Father: {fileID: 486768349}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1902930289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1568206923884760, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902930290}
+  m_Layer: 0
+  m_Name: Pterodactyl L Eyebrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1902930290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4182508548947308, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1902930289}
+  m_LocalRotation: {x: -0.10217223, y: 0.18155095, z: 0.479001, w: 0.8527357}
+  m_LocalPosition: {x: -0.43317991, y: 0.4155967, z: 0.20791262}
+  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1175130910}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1950464982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1580194795823410, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1950464983}
+  m_Layer: 0
+  m_Name: Pterodactyl R Finger0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1950464983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4545272164842722, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1950464982}
+  m_LocalRotation: {x: -0.05906333, y: 0.77321017, z: -0.2366666, w: 0.58536017}
+  m_LocalPosition: {x: -0.10889801, y: -0.035708006, z: 0.09353218}
+  m_LocalScale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
+  m_Children:
+  - {fileID: 1367972454}
+  m_Father: {fileID: 853764299}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1959994314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1949317837999656, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1959994315}
+  m_Layer: 0
+  m_Name: Pterodactyl R Upper Eyelid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1959994315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4451609324944470, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 1959994314}
+  m_LocalRotation: {x: -0.51240313, y: -0.2805972, z: -0.4617153, w: 0.66747826}
+  m_LocalPosition: {x: -0.36425415, y: 0.24868041, z: -0.13492456}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 1175130910}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2025783343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1497234481514954, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2025783344}
+  m_Layer: 0
+  m_Name: Pterodactyl L Finger21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2025783344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4031506936743302, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 2025783343}
+  m_LocalRotation: {x: 0.00000002994328, y: 0.0000000068621824, z: -0.019694885, w: 0.99980605}
+  m_LocalPosition: {x: -0.5752322, y: 0, z: -0.00000015258789}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 486419778}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2065904846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1156047460338762, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2065904847}
+  m_Layer: 0
+  m_Name: Pterodactyl L Upper Eyelid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2065904847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4913130782486936, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 2065904846}
+  m_LocalRotation: {x: 0.51240313, y: 0.28059983, z: -0.4617137, w: 0.66747826}
+  m_LocalPosition: {x: -0.36425406, y: 0.24867958, z: 0.13492595}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1175130910}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2067915692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1127699573651842, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067915693}
+  m_Layer: 0
+  m_Name: Pterodactyl R UpperArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2067915693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4460114445794178, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 2067915692}
+  m_LocalRotation: {x: 0.60734034, y: 0.13888218, z: 0.01549308, w: 0.78205466}
+  m_LocalPosition: {x: -0.253399, y: 0.000000038146972, z: 0}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 5399961}
+  m_Father: {fileID: 1443893230}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2102415398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1529229723415244, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2102415399}
+  m_Layer: 0
+  m_Name: Pterodactyl Tail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2102415399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4329095893238886, guid: 2fe5c613f088dde4c8ae644d7f23e111,
+    type: 2}
+  m_PrefabInternal: {fileID: 1150060590}
+  m_GameObject: {fileID: 2102415398}
+  m_LocalRotation: {x: -0.0000007933104, y: -0.00000009151299, z: 0.7700096, w: 0.6380323}
+  m_LocalPosition: {x: 0.12585387, y: -0.30321276, z: 0.0000005788144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1526842633}
+  m_Father: {fileID: 1814365785}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

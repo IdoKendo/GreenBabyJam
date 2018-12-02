@@ -1,15 +1,22 @@
 fileFormatVersion: 2
-guid: 94778eb84a7752045b7d6c7d04b53eac
+guid: 8c9b879fb07be514a956ba3f33e68c23
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: TopHat3:pCylinder3
     400000: //RootNode
-    2100000: Wooden_Club
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Wooden_Club
-  externalObjects: {}
+    400002: TopHat3:pCylinder3
+    2100000: TopHat3_pCylinder3Mat
+    2300000: TopHat3:pCylinder3
+    3300000: TopHat3:pCylinder3
+    4300000: TopHat3:pCylinder3
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TopHat3_pCylinder3Mat
+    second: {fileID: 2100000, guid: f83d300e8d2ce38409d2152a676e0daa, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -40,7 +47,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.25
+    globalScale: 0.17
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

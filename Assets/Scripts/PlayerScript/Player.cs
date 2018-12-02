@@ -93,6 +93,7 @@ public class Player : Creature
         if (Input.GetButtonDown(InputButtonType.Jump) && m_isGrounded)
         {
             Vector2 jumpVector = Vector2.up * m_jumpForce;
+            m_barbarianAnimator.SetTrigger("Jump");
 
             if (m_shielded)
             {
@@ -122,10 +123,12 @@ public class Player : Creature
             if (Input.GetButton(InputButtonType.Fire3))
             {
                 m_shielded = true;
+                m_barbarianAnimator.SetBool("Blocking", true);
             }
             else
             {
                 m_shielded = false;
+                m_barbarianAnimator.SetBool("Blocking", false);
             }
         }
     }
@@ -155,12 +158,16 @@ public class Player : Creature
 
     private void MeleeAttack()
     {
+        m_barbarianAnimator.SetLayerWeight(1, 1);
+        m_barbarianAnimator.SetTrigger("SimpleAttack");
         Instantiate(m_weaponPrefab, transform.position, Quaternion.identity);
         m_weaponTime = m_weaponCooldown;
     }
 
     private void FireballAttack()
     {
+        m_barbarianAnimator.SetLayerWeight(1, 1);
+        m_barbarianAnimator.SetTrigger("FireAttack");
         GameObject fireball = Instantiate(m_fireballPrefab, transform.position, Quaternion.identity);
         float potentialNewHealth = m_currHealth - m_fireballSelfDamage;
 
@@ -258,5 +265,12 @@ public class Player : Creature
             default:
                 break;
         }
+    }
+
+
+    //Reset animation layer weight
+    void ResetAnimationLayer()
+    {
+        m_barbarianAnimator.SetLayerWeight(1, 0);
     }
 }

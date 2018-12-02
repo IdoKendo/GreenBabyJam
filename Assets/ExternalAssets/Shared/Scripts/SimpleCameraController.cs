@@ -125,7 +125,7 @@ namespace UnityTemplateProjects
             // Rotation
             if (Input.GetMouseButton(1))
             {
-                var mouseMovement = new Vector2(Input.GetAxis(AxisActionType.MouseX), Input.GetAxis(AxisActionType.MouseY) * (invertY ? 1 : -1));
+                var mouseMovement = new Vector2(Input.GetAxis(AxisActionType.MOUSE_X), Input.GetAxis(AxisActionType.MOUSE_Y) * (invertY ? 1 : -1));
                 
                 var mouseSensitivityFactor = mouseSensitivityCurve.Evaluate(mouseMovement.magnitude);
 

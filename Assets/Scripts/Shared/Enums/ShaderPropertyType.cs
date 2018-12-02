@@ -2,6 +2,6 @@
 {
     public static class ShaderPropertyType
     {
-        public static string CutOff = "_cutoff";
+        public static string CUT_OFF = "_cutoff";
     }
 }

@@ -1,5 +1,5 @@
-﻿public enum eVerticalDirection
+﻿public enum EVerticalDirection
 {
-    Up,
-    Down
+    UP,
+    DOWN
 }

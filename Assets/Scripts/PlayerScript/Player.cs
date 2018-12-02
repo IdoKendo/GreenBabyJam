@@ -72,25 +72,25 @@ public class Player : Creature
             return;
         }
 
-        float deltaX = Input.GetAxis(AxisActionType.Horizontal);
+        float deltaX = Input.GetAxis(AxisActionType.HORIZONTAL);
         m_barbarianAnimator.SetFloat("MoveSpeed", Mathf.Abs(deltaX));
 
         if (deltaX < 0)
         {
-            m_direction = eHorizontalDirection.Right;
+            m_direction = EHorizontalDirection.RIGHT;
         }
         else if (deltaX > 0)
         {
-            m_direction = eHorizontalDirection.Left;
+            m_direction = EHorizontalDirection.LEFT;
         }
 
         m_rigidBody.velocity = new Vector2(deltaX * m_moveSpeed, m_rigidBody.velocity.y);
-        transform.localRotation = Quaternion.Euler(0, m_direction == eHorizontalDirection.Left ? 0 : 180, 0);
+        transform.localRotation = Quaternion.Euler(0, m_direction == EHorizontalDirection.LEFT ? 0 : 180, 0);
     }
 
     private void Jump()
     {
-        if (Input.GetButtonDown(InputButtonType.Jump) && m_isGrounded)
+        if (Input.GetButtonDown(InputButtonType.JUMP) && m_isGrounded)
         {
             Vector2 jumpVector = Vector2.up * m_jumpForce;
             m_barbarianAnimator.SetTrigger("Jump");
@@ -110,17 +110,17 @@ public class Player : Creature
 
     private void PerformAction()
     {
-        if (Input.GetButtonDown(InputButtonType.Fire1) && m_weaponTime <= 0)
+        if (Input.GetButtonDown(InputButtonType.FIRE1) && m_weaponTime <= 0)
         {
             MeleeAttack();
         }
-        else if (Input.GetButtonDown(InputButtonType.Fire2) && m_unlockedFireballs && m_fireballTime <= 0)
+        else if (Input.GetButtonDown(InputButtonType.FIRE2) && m_unlockedFireballs && m_fireballTime <= 0)
         {
             FireballAttack();
         }
         else if (m_unlockedShield)
         {
-            if (Input.GetButton(InputButtonType.Fire3))
+            if (Input.GetButton(InputButtonType.FIRE3))
             {
                 m_shielded = true;
                 m_barbarianAnimator.SetBool("Blocking", true);
@@ -178,13 +178,13 @@ public class Player : Creature
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(GameCollisionType.Ground))
+        if (collision.gameObject.CompareTag(GameCollisionType.GROUND))
         {
             for (int i = 0; i < collision.contactCount; i++)
                 if (Mathf.Abs(collision.contacts[i].normal[1]) > 0.9f)
                     m_isGrounded = true;
         }
-        else if (collision.gameObject.CompareTag(GameCollisionType.Platform))
+        else if (collision.gameObject.CompareTag(GameCollisionType.PLATFORM))
         {
             m_isGrounded = true;
             transform.parent = collision.transform;
@@ -193,11 +193,11 @@ public class Player : Creature
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(GameCollisionType.Ground))
+        if (collision.gameObject.CompareTag(GameCollisionType.GROUND))
         {
             m_isGrounded = false;
         }
-        else if (collision.gameObject.CompareTag(GameCollisionType.Platform))
+        else if (collision.gameObject.CompareTag(GameCollisionType.PLATFORM))
         {
             m_isGrounded = false;
             transform.parent = null;
@@ -206,7 +206,7 @@ public class Player : Creature
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == CollisionType.EnemyDamageDealer)
+        if (collision.tag == CollisionType.ENEMY_DAMAGE_DEALER)
         {
             if (m_shielded)
             {
@@ -235,7 +235,7 @@ public class Player : Creature
     {
         float knockbackPower = m_knockbackPower;
 
-        if (m_direction == eHorizontalDirection.Left)
+        if (m_direction == EHorizontalDirection.LEFT)
         {
             knockbackPower = -knockbackPower;
 

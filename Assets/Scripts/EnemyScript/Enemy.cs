@@ -40,14 +40,14 @@ public class Enemy : Creature
     private bool FindPlayer()
     {
         bool foundPlayer = true;
-        Vector2 direction = m_direction == eHorizontalDirection.Left ? Vector2.left : Vector2.right;
+        Vector2 direction = m_direction == EHorizontalDirection.LEFT ? Vector2.left : Vector2.right;
         RaycastHit2D hit = Physics2D.Raycast(m_playerDetector.position, direction, m_attackDistance);
 
         Debug.DrawRay(m_playerDetector.position, direction, new Color(0, 0, 255));
 
         if (hit.collider != null)
         {
-            if (hit.collider.CompareTag(CharacterType.Player))
+            if (hit.collider.CompareTag(CharacterType.PLAYER))
             {
                 if (m_attackTime <= 0)
                 {
@@ -70,8 +70,8 @@ public class Enemy : Creature
 
     private void Patrol()
     {
-        Vector2 directionDown = m_direction == eHorizontalDirection.Left ? new Vector2(-1, -0.5f) : new Vector2(1, -0.5f);
-        Vector2 directionForward = m_direction == eHorizontalDirection.Left ? Vector2.left : Vector2.right;
+        Vector2 directionDown = m_direction == EHorizontalDirection.LEFT ? new Vector2(-1, -0.5f) : new Vector2(1, -0.5f);
+        Vector2 directionForward = m_direction == EHorizontalDirection.LEFT ? Vector2.left : Vector2.right;
         RaycastHit2D hitDown = Physics2D.Raycast(m_platformDetector.position, directionDown, m_distanceToDetect);
         RaycastHit2D hitForward = Physics2D.Raycast(m_platformDetector.position, directionForward, m_distanceToDetect);
 
@@ -93,16 +93,16 @@ public class Enemy : Creature
 
     private void ChangeDirection()
     {
-        if (m_direction == eHorizontalDirection.Left)
+        if (m_direction == EHorizontalDirection.LEFT)
         {
-            m_direction = eHorizontalDirection.Right;
+            m_direction = EHorizontalDirection.RIGHT;
         }
         else
         {
-            m_direction = eHorizontalDirection.Left;
+            m_direction = EHorizontalDirection.LEFT;
         }
 
-        transform.localRotation = Quaternion.Euler(0, m_direction == eHorizontalDirection.Left ? 0 : 180, 0);
+        transform.localRotation = Quaternion.Euler(0, m_direction == EHorizontalDirection.LEFT ? 0 : 180, 0);
     }
 
     private void Move()
@@ -111,14 +111,14 @@ public class Enemy : Creature
 
         transform.position = new Vector2()
         {
-            x = m_direction == eHorizontalDirection.Left ? transform.position.x - delta : transform.position.x + delta,
+            x = m_direction == EHorizontalDirection.LEFT ? transform.position.x - delta : transform.position.x + delta,
             y = transform.position.y
         };
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == CollisionType.PlayerDamageDealer)
+        if (collision.tag == CollisionType.PLAYER_DAMAGE_DEALER)
         {
             ProcessHit(collision.gameObject.GetComponent<DamageDealer>());
         }

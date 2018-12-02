@@ -2,9 +2,9 @@
 {
     public static class GameCollisionType
     {
-        public static string Fireball = "fireball";
-        public static string Ground = "Ground";
-        public static string Platform = "Platform";
-        public static string Player = "Player";
+        public static string FIREBALL = "fireball";
+        public static string GROUND = "Ground";
+        public static string PLATFORM = "Platform";
+        public static string PLAYER = "Player";
     }
 }

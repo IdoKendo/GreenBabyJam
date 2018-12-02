@@ -2,7 +2,7 @@
 {
     public static class CollisionType
     {
-        public static string EnemyDamageDealer = "EnemyDamageDealer";
-        public static string PlayerDamageDealer = "PlayerDamageDealer";
+        public static string ENEMY_DAMAGE_DEALER = "EnemyDamageDealer";
+        public static string PLAYER_DAMAGE_DEALER = "PlayerDamageDealer";
     }
 }

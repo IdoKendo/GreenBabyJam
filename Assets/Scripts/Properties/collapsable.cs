@@ -46,5 +46,4 @@ public class collapsable : MonoBehaviour {
             should_start_falling = true;
         }
     }
-
 }

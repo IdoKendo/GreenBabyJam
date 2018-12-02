@@ -214,12 +214,16 @@ public class Player : Creature
         if (collision.tag == CollisionType.ENEMY_DAMAGE_DEALER)
         {
             if (m_shielded)
-            {
                 return;
-            }
 
             Knockback();
             ProcessHit(collision.gameObject.GetComponent<DamageDealer>());
+            return;
+        }
+
+        if (collision.tag == CollisionType.OPEN_DOOR_ROOM2)
+        {
+
         }
     }
 
@@ -279,7 +283,7 @@ public class Player : Creature
         m_barbarianAnimator.SetLayerWeight(1, 0);
     }
 
-    void Save()
+    public void Save()
     {
         Game_Manager.PlayerManager.Health = m_currHealth;
         Game_Manager.PlayerManager.Fireballs = m_unlockedFireballs;

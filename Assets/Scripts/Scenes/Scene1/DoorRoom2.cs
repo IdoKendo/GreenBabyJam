@@ -18,8 +18,11 @@ namespace Assets.Scripts.Scenes.Scene1
 
         IEnumerator LoadScene()
         {
+            var player = FindObjectOfType<Player>();
+            player.Save();
+
             transitionAnimation.SetTrigger(AnimationTriggerType.SCREEN_FADE_END);
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(0.2f);
             SceneManager.LoadScene((int)SceneType.LEVEL2);
         }
     }

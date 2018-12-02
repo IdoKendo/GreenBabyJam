@@ -2,6 +2,6 @@
 {
     public static class CharacterType
     {
-        public static string Player = "Player";
+        public static string PLAYER = "Player";
     }
 }

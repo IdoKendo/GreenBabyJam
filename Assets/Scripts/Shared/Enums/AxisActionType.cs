@@ -2,10 +2,10 @@
 {
     public static class AxisActionType
     {
-        public static string Horizontal = "Horizontal";
-        public static string MouseScrollWheel = "Mouse ScrollWheel";
-        public static string MouseX = "Mouse X";
-        public static string MouseY = "Mouse Y";
-        public static string Vertical = "Vertical";
+        public static string HORIZONTAL = "Horizontal";
+        public static string MOUSE_SCROLL_WHEEL = "Mouse ScrollWheel";
+        public static string MOUSE_X = "Mouse X";
+        public static string MOUSE_Y = "Mouse Y";
+        public static string VERTICAL = "Vertical";
     }
 }

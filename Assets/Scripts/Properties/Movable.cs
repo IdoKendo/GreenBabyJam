@@ -9,15 +9,15 @@ public class Movable : MonoBehaviour
 
     [Header("Direction")]
     [SerializeField] private bool m_moveHorizontal = true;
-    [SerializeField] private eHorizontalDirection m_horizontalStartDirection = eHorizontalDirection.Left;
+    [SerializeField] private EHorizontalDirection m_horizontalStartDirection = EHorizontalDirection.LEFT;
     [SerializeField] private bool m_moveVertical = false;
-    [SerializeField] private eVerticalDirection m_verticalStartDirection = eVerticalDirection.Up;
+    [SerializeField] private EVerticalDirection m_verticalStartDirection = EVerticalDirection.UP;
 
     private float m_distancePassedX = 0f;
     private float m_distancePassedY = 0f;
     private Vector2 m_startPosition;
-    private eHorizontalDirection m_horizontalCurrDirection;
-    private eVerticalDirection m_verticalCurrDirection;
+    private EHorizontalDirection m_horizontalCurrDirection;
+    private EVerticalDirection m_verticalCurrDirection;
 
     private void Start()
     {
@@ -52,13 +52,13 @@ public class Movable : MonoBehaviour
 
         if (m_moveHorizontal)
         {
-            newHorizontalPosition = m_horizontalCurrDirection == eHorizontalDirection.Left ? transform.position.x - delta : transform.position.x + delta;
+            newHorizontalPosition = m_horizontalCurrDirection == EHorizontalDirection.LEFT ? transform.position.x - delta : transform.position.x + delta;
             m_distancePassedX += delta;
         }
 
         if (m_moveVertical)
         {
-            newVerticalPosition = m_verticalCurrDirection == eVerticalDirection.Up ? transform.position.y + delta : transform.position.y - delta;
+            newVerticalPosition = m_verticalCurrDirection == EVerticalDirection.UP ? transform.position.y + delta : transform.position.y - delta;
             m_distancePassedY += delta;
         }
 
@@ -71,25 +71,25 @@ public class Movable : MonoBehaviour
 
     private void FlipVertical()
     {
-        if (m_verticalCurrDirection == eVerticalDirection.Up)
+        if (m_verticalCurrDirection == EVerticalDirection.UP)
         {
-            m_verticalCurrDirection = eVerticalDirection.Down;
+            m_verticalCurrDirection = EVerticalDirection.DOWN;
         }
         else
         {
-            m_verticalCurrDirection = eVerticalDirection.Up;
+            m_verticalCurrDirection = EVerticalDirection.UP;
         }
     }
 
     private void FlipHorizontal()
     {
-        if (m_horizontalCurrDirection == eHorizontalDirection.Left)
+        if (m_horizontalCurrDirection == EHorizontalDirection.LEFT)
         {
-            m_horizontalCurrDirection = eHorizontalDirection.Right;
+            m_horizontalCurrDirection = EHorizontalDirection.RIGHT;
         }
         else
         {
-            m_horizontalCurrDirection = eHorizontalDirection.Left;
+            m_horizontalCurrDirection = EHorizontalDirection.LEFT;
         }
     }
 }

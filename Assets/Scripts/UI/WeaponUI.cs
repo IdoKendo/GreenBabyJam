@@ -15,11 +15,11 @@ public class WeaponUI : MonoBehaviour
     // Use this for initialization
     void Start () {
         
-        fireWeapon = GameObject.Find(GameObjectType.FireWeapon);
-        wheelWeapon = GameObject.Find(GameObjectType.WheelWeapon);
+        fireWeapon = GameObject.Find(GameObjectType.FIRE_WEAPON);
+        wheelWeapon = GameObject.Find(GameObjectType.WHEEL_WEAPON);
         player = FindObjectOfType<Player>();
         setUI();
-        weapons = GameObject.Find(GameObjectType.WeaponUI);
+        weapons = GameObject.Find(GameObjectType.WEAPON_UI);
         //WeaponUIPosition();
     }
 

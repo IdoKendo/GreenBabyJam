@@ -2,9 +2,9 @@
 {
     public static class GameObjectType
     {
-        public static string HealthBar = "HealthBar";
-        public static string FireWeapon = "FireWeapon";
-        public static string WeaponUI = "WeaponUI";
-        public static string WheelWeapon = "WheelWeapon";
+        public static string HEALTH_BAR = "HealthBar";
+        public static string FIRE_WEAPON = "FireWeapon";
+        public static string WEAPON_UI = "WeaponUI";
+        public static string WHEEL_WEAPON = "WheelWeapon";
     }
 }

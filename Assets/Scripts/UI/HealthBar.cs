@@ -15,7 +15,7 @@ public class HealthBar : MonoBehaviour {
     // Use this for initialization
     void Start () {
         player = FindObjectOfType<Player>();
-        healthBar = GameObject.Find(GameObjectType.HealthBar);
+        healthBar = GameObject.Find(GameObjectType.HEALTH_BAR);
       //  HealthBarPosition();
     }
 

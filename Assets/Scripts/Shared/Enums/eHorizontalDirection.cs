@@ -1,5 +1,5 @@
-﻿public enum eHorizontalDirection
+﻿public enum EHorizontalDirection
 {
-    Left,
-    Right
+    LEFT,
+    RIGHT
 }

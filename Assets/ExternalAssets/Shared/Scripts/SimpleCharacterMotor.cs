@@ -41,8 +41,8 @@ public class SimpleCharacterMotor : MonoBehaviour
 
     void UpdateLookRotation()
     {
-        var x = Input.GetAxis(AxisActionType.MouseY);
-        var y = Input.GetAxis(AxisActionType.MouseX);
+        var x = Input.GetAxis(AxisActionType.MOUSE_Y);
+        var y = Input.GetAxis(AxisActionType.MOUSE_X);
 
         x *= invertY ? -1 : 1;
         targetRotation = transform.localRotation * Quaternion.AngleAxis(y * lookSpeed * Time.deltaTime, Vector3.up);
@@ -56,8 +56,8 @@ public class SimpleCharacterMotor : MonoBehaviour
     {
         if (controller.isGrounded)
         {
-            var x = Input.GetAxis(AxisActionType.Horizontal);
-            var z = Input.GetAxis(AxisActionType.Vertical);
+            var x = Input.GetAxis(AxisActionType.HORIZONTAL);
+            var z = Input.GetAxis(AxisActionType.VERTICAL);
             var run = Input.GetKey(KeyCode.LeftShift);
 
             var translation = new Vector3(x, 0, z);

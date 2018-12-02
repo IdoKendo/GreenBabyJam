@@ -48,9 +48,12 @@ TagManager:
   - name: Background
     uniqueID: 2844663561
     locked: 0
-  - name: Fire
-    uniqueID: 3804908061
+  - name: Vines
+    uniqueID: 1900395467
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Fire
+    uniqueID: 3804908061
     locked: 0

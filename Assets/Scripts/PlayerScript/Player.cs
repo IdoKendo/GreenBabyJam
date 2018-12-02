@@ -51,6 +51,8 @@ public class Player : Creature
 
         m_maxHealth = Game_Manager.PlayerManager.MaxHealth;
         m_currHealth = Game_Manager.PlayerManager.Health;
+        m_unlockedFireballs = Game_Manager.PlayerManager.Fireballs;
+        m_unlockedShield = Game_Manager.PlayerManager.Shield;
     }
 
     private void Update()
@@ -280,6 +282,8 @@ public class Player : Creature
     void Save()
     {
         Game_Manager.PlayerManager.Health = m_currHealth;
+        Game_Manager.PlayerManager.Fireballs = m_unlockedFireballs;
         Game_Manager.PlayerManager.MaxHealth = m_maxHealth;
+        Game_Manager.PlayerManager.Shield = m_unlockedShield;
     }
 }

@@ -48,6 +48,9 @@ public class Player : Creature
         base.Start();
         m_barbarianAnimator = GetComponentInChildren<Animator>();
         m_collider = gameObject.GetComponent<CapsuleCollider2D>();
+
+        m_maxHealth = Game_Manager.PlayerManager.MaxHealth;
+        m_currHealth = Game_Manager.PlayerManager.Health;
     }
 
     private void Update()
@@ -272,5 +275,11 @@ public class Player : Creature
     void ResetAnimationLayer()
     {
         m_barbarianAnimator.SetLayerWeight(1, 0);
+    }
+
+    void Save()
+    {
+        Game_Manager.PlayerManager.Health = m_currHealth;
+        Game_Manager.PlayerManager.MaxHealth = m_maxHealth;
     }
 }

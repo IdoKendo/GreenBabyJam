@@ -1,10 +1,14 @@
-﻿using Assets.Scripts.PlayerScript;
-using System;
-
-namespace Assets.Scripts.Shared.Managers
+﻿namespace Assets.Scripts.Shared.Managers
 {
     public class Player_Manager
     {
-        public PlayerStatistics savedPlayerData = new PlayerStatistics();
+        public float Health { get; set; }
+        public float MaxHealth { get; set; }
+
+        public Player_Manager()
+        {
+            MaxHealth = 100;
+            Health = MaxHealth;
+        }
     }
 }

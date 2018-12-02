@@ -48,6 +48,9 @@ TagManager:
   - name: Background
     uniqueID: 2844663561
     locked: 0
+  - name: Platforms
+    uniqueID: 164380567
+    locked: 0
   - name: Vines
     uniqueID: 1900395467
     locked: 0

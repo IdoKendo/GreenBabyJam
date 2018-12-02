@@ -40,7 +40,7 @@ public class collapsable : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(GameCollisionType.PLAYER))
+        if (collision.gameObject.CompareTag(GameCollisionType.PLAYER) && collision.otherCollider.GetType() == typeof(PolygonCollider2D))
         {
             Instantiate(m_fallAnimation, transform.position, Quaternion.identity);
             should_start_falling = true;

@@ -32,7 +32,7 @@ public class Game_Manager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        SceneManager.LoadScene((int)SceneType.LEVEL1);
+        SceneManager.LoadScene((int)SceneType.MAIN_MENU);
 	}
 	
 	// Update is called once per frame

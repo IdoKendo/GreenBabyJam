@@ -19,7 +19,7 @@ namespace Assets.Scripts.Scenes.Scene1
         IEnumerator LoadScene()
         {
             var player = FindObjectOfType<Player>();
-            player.Save();
+            player.Save(SceneType.LEVEL2);
 
             transitionAnimation.SetTrigger(AnimationTriggerType.SCREEN_FADE_END);
             yield return new WaitForSeconds(0.2f);

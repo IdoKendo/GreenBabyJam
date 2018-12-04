@@ -1,2 +1,0 @@
-# GreenBabyJam
-Green Baby Jam

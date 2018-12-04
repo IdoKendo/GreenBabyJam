@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Shared.Enums;
+using Assets.Scripts.Shared.Managers;
 using Shared.Enums;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -51,11 +52,11 @@ public class Player : Creature
         m_barbarianAnimator = GetComponentInChildren<Animator>();
         m_collider = gameObject.GetComponent<CapsuleCollider2D>();
 
-        m_maxHealth = Game_Manager.PlayerManager.MaxHealth;
-        m_currHealth = Game_Manager.PlayerManager.Health;
-        m_Scene = Game_Manager.PlayerManager.Scene;
-        m_unlockedFireballs = Game_Manager.PlayerManager.Fireballs;
-        m_unlockedShield = Game_Manager.PlayerManager.Shield;
+        m_maxHealth = Game_Manager.playerManager.MaxHealth;
+        m_currHealth = Game_Manager.playerManager.Health;
+        m_Scene = Game_Manager.playerManager.Scene;
+        m_unlockedFireballs = Game_Manager.playerManager.Fireballs;
+        m_unlockedShield = Game_Manager.playerManager.Shield;
     }
 
     private void Update()
@@ -100,6 +101,7 @@ public class Player : Creature
     {
         if (Input.GetButtonDown(InputButtonType.JUMP) && m_isGrounded)
         {
+            Sound_Manager.instance.Jump();
             Vector2 jumpVector = Vector2.up * m_jumpForce;
             m_barbarianAnimator.SetTrigger("Jump");
 
@@ -260,11 +262,12 @@ public class Player : Creature
 
     protected override void DieAnimation()
     {
+        Sound_Manager.instance.Boom();
         foreach (GameObject animationPrefab in m_deathAnnimationArray)
         {
             Instantiate(animationPrefab, transform.position, Quaternion.identity);
         }
-
+        
         m_currHealth = m_maxHealth;
         Save(m_Scene);
         SceneManager.LoadScene((int)m_Scene);
@@ -293,10 +296,10 @@ public class Player : Creature
 
     public void Save(SceneType scene)
     {
-        Game_Manager.PlayerManager.Health = m_currHealth;
-        Game_Manager.PlayerManager.Fireballs = m_unlockedFireballs;
-        Game_Manager.PlayerManager.MaxHealth = m_maxHealth;
-        Game_Manager.PlayerManager.Scene = scene;
-        Game_Manager.PlayerManager.Shield = m_unlockedShield;
+        Game_Manager.playerManager.Health = m_currHealth;
+        Game_Manager.playerManager.Fireballs = m_unlockedFireballs;
+        Game_Manager.playerManager.MaxHealth = m_maxHealth;
+        Game_Manager.playerManager.Scene = scene;
+        Game_Manager.playerManager.Shield = m_unlockedShield;
     }
 }

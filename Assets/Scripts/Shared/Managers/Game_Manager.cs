@@ -5,23 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Game_Manager : MonoBehaviour
 {
-    public static Game_Manager Instance = null;
-    public static Player_Manager PlayerManager = null;
+    public static Game_Manager instance = null;
+    public static Player_Manager playerManager = null;
+    public static Sound_Manager soundManager = null;
 
     // Awake is always called before any Start functions
     public void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
             DontDestroyOnLoad(this.gameObject);
-            Instance = this;
+            instance = this;
         }
-        else if (Instance != this)
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
 
-        PlayerManager = new Player_Manager();
+        playerManager = new Player_Manager();
     }
 
     public void NewGame()

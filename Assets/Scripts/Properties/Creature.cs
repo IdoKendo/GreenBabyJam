@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Shared.Managers;
+using UnityEngine;
 
 public class Creature : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Creature : MonoBehaviour
 
     internal void ProcessHit(DamageDealer damageDealer)
     {
+        Sound_Manager.instance.Pow();
         m_currHealth -= damageDealer.Damage;
 
         Debug.Log(string.Format("I got hit! my hp is: {0}", m_currHealth));
